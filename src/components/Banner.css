@@ -1,0 +1,40 @@
+.banner {
+  height: 48vh;
+  position: relative;
+  border-radius: 10px;
+  justify-content: space-around;
+  margin: 0 12px;
+}
+.banner__img {
+  height: -webkit-fill-available;
+  max-width: inherit;
+  min-width: -webkit-fill-available;
+  border-radius: 10px;
+}
+.banner > h5 {
+  color: #ffffff;
+  position: absolute;
+  top: 100px;
+  left: 40vw;
+}
+.banner__search {
+  padding: 10px;
+  width: 540px;
+  display: flex;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  left: 25vw;
+  border-radius: 999px;
+}
+.banner__search > input {
+  border: none;
+  width: 100vw;
+  font-size: 14px;
+}
+.banner__search > input:focus {
+  outline-width: 0;
+}
+.banner__search__icon:hover {
+  cursor: pointer;
+}

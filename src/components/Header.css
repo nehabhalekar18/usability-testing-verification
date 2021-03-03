@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+.header > h1 {
+  object-fit: contain;
+  margin-left: 20px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  /* max-width: fit-content; */
+  padding: 10px;
+  height: 30px;
+  justify-content: space-around;
+  max-width: 30vw;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.header__right__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15vw;
+  margin-right: 20px;
+}

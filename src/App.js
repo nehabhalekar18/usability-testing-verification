@@ -1,9 +1,13 @@
+import Explore from "./components/Explore";
+import Header from "./components/Header";
+
 function App() {
   return (
     <div className="App">
-      {/* Loggedin Header */}
-      {/* General Header */}
+      {/* Header */}
+      <Header signedIn={true} />
       {/* Explore */}
+      <Explore />
       {/* Sign In */}
       {/* Sign Up */}
       {/* Create Trip */}
