@@ -3,7 +3,6 @@ import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined"
 import React from "react";
 import "./Header.css";
 function Header({ signedIn }) {
-  console.log(signedIn);
   return signedIn === true ? (
     <div className="header">
       <h1>Trip Buddy</h1>

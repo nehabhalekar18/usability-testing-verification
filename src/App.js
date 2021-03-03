@@ -1,3 +1,4 @@
+import Explore from "./components/Explore";
 import Header from "./components/Header";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
       {/* Header */}
       <Header signedIn={true} />
       {/* Explore */}
+      <Explore />
       {/* Sign In */}
       {/* Sign Up */}
       {/* Create Trip */}
