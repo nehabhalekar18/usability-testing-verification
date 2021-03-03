@@ -18,18 +18,13 @@ function Explore() {
       <Banner />
       {/* Location */}
       <Location locations={locations} />
-      <div className="row justify-content-center">
-        {loadMoreBtn ? (
-          <div className="col-sm-2">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={loadMore}>
-              Load More
-            </button>
-          </div>
-        ) : null}
-      </div>
+      {loadMoreBtn ? (
+        <div className="explore__loadMore__btn">
+          <button type="button" className="btn btn-primary" onClick={loadMore}>
+            Load More
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

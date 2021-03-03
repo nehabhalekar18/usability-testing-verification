@@ -13,7 +13,9 @@ function Banner() {
         <input type="text" placeholder="Location" />
         <SearchOutlinedIcon className="banner__search__icon" />
       </div>
-      <h5>Never Stop Exploring</h5>
+      <div className="banner__content">
+        <h5>Never Stop Exploring</h5>
+      </div>
     </div>
   );
 }

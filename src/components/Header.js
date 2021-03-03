@@ -1,30 +1,30 @@
-import { Button } from "@material-ui/core";
-import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import React from "react";
+import LogoImg from "../assets/logo.png";
+import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
+
 function Header({ signedIn }) {
   return signedIn === true ? (
     <div className="header">
-      <h1>Trip Buddy</h1>
+      <img src={LogoImg} alt="" className="header__logo" />
       <div className="header__nav">
-        <h4>Explore</h4>
-        <h4>My Trips</h4>
-        <h4>Storybooks</h4>
+        <h6>Explore</h6>
+        <h6>My Trips</h6>
+        <h6>Storybooks</h6>
       </div>
       <div className="header__right">
-        <AccountCircleOutlinedIcon />
-        <h4>John Smith</h4>
+        <img src={UserImg} alt="" className="header__user" />
       </div>
     </div>
   ) : (
     <div className="header">
-      <h1>Trip Buddy</h1>
+      <img src={LogoImg} alt="" className="header__logo" />
       <div className="header__nav">
-        <h4>Explore</h4>
+        <h6>Explore</h6>
       </div>
       <div className="header__right__buttons">
-        <Button variant="outlined">Sign Up</Button>
-        <Button variant="outlined">Login</Button>
+        <button className="header__login_btn">Login</button>
+        <button className="header__signIn_btn">Sign Up</button>
       </div>
     </div>
   );
