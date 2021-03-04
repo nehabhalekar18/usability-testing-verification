@@ -1,0 +1,132 @@
+.login {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.login__img {
+  max-width: 100%;
+}
+
+.login__content1 {
+  position: absolute;
+  width: 198px;
+  height: 24px;
+  left: 75px;
+  top: 200px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #020826;
+}
+.login__content2 {
+  position: absolute;
+  width: 520px;
+  height: 210px;
+  left: 75px;
+  top: 250px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 70px;
+  color: #272343;
+}
+
+.login__content3 {
+  position: absolute;
+  width: 310px;
+  height: 81px;
+  left: 75px;
+  top: 500px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.login__card {
+  position: absolute;
+  width: 436px;
+  height: 576px;
+  left: 924px;
+  top: 100px;
+
+  background: #fffffe;
+  border: 1px solid #fffffe;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.login__cardtitle {
+  position: absolute;
+  width: 206px;
+
+  top: 30px;
+  left: 120px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #272343;
+}
+
+.login__cardtext {
+  position: absolute;
+  top: 120px;
+  left: 160px;
+}
+
+.login__cardOR {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  width: 100px;
+}
+
+.login__OR {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 100px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: rgba(39, 35, 67, 0.3);
+}
+
+.login__form {
+  position: absolute;
+  height: 40px;
+  left: 961px;
+  top: 300px;
+  width: 300px;
+}
+.login__signup {
+  position: absolute;
+  width: 167px;
+  height: 52px;
+  left: 961px;
+  top: 500px;
+
+  border: 1px solid #5969ff;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.login__loginbtn {
+  position: absolute;
+  width: 167px;
+  height: 52px;
+  left: 1149px;
+  top: 500px;
+
+  background: #272343;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
