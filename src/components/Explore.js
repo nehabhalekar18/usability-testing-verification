@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Banner from "./Banner";
 import Location from "./Location";
 import "./Explore.css";
-import locationList from "../constants/Data";
+import locationList from "../constants/locationsData";
+
+import BannerImg from "../assets/banner-img.jpg";
 
 function Explore() {
   const [loadMoreBtn, setLoadMoreBtn] = useState(true);
@@ -15,7 +17,7 @@ function Explore() {
   return (
     <div className="explore">
       {/* Banner */}
-      <Banner />
+      <Banner bannerImg={BannerImg} />
       {/* Location */}
       <Location locations={locations} />
       {loadMoreBtn ? (
