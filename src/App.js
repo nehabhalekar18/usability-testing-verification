@@ -21,6 +21,8 @@ function App() {
       {/* <Explore /> */}
       {/* <ExploreLocation /> */}
       {/* Sign In */}
+      {/* <Login /> */}
+
       {/* Sign Up */}
       {/* Create Trip */}
       {/* My Trip */}
