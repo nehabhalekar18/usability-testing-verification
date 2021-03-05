@@ -1,47 +1,49 @@
-.location {
+.dubaiLocation {
   margin: 20px 0;
 }
-.location > div {
+.dubaiLocation > div {
   margin-bottom: 20px;
 }
-.location > div > a {
-  text-decoration: none;
-  color: inherit;
-}
-.location__card {
+.dubaiLocation__card {
   height: fit-content;
   background-color: #ffffff;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.15);
   display: block;
   border-radius: 10px;
 }
-.location__card:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-.location__img {
+
+.dubaiLocation__img {
   height: 180px;
   max-width: -webkit-fill-available;
   min-width: -webkit-fill-available;
   border-radius: 8px 8px 0 0;
 }
-.location__data {
+.dubaiLocation__data {
   padding: 10px;
   display: block;
 }
-.location__data > h4 {
+.dubaiLocation__data > h4 {
   margin: unset;
 }
-.location__description {
+.dubaiLocation__description {
   margin-top: 10px;
   display: flex;
 }
-.location__description > p {
+.dubaiLocation__description > p {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.location__description > p,
-.location__data > p {
+.dubaiLocation__description > p,
+.dubaiLocation__data > p {
   font-size: 12px;
   margin: 2px 0 0 0;
+}
+
+.dubaiLocation__data__contents {
+  display: flex;
+  justify-content: space-between;
+}
+.dubaiLocation__data__contents > a {
+  text-decoration: none;
+  color: inherit;
 }
