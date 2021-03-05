@@ -67,10 +67,10 @@ function Login() {
           </div>
         </form>
         <button type="button" class="btn btn-outline-primary login__signup">
-          Primary
+          Sign Up
         </button>
         <button type="button" class="btn btn-dark login__loginbtn">
-          Dark
+          Log In
         </button>
       </div>
     </div>
