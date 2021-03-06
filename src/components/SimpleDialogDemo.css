@@ -1,0 +1,8 @@
+.del {
+  margin-right: 10px;
+}
+
+.ss > .MuiDialog-paperWidth {
+  position: absolute;
+  top: 10;
+}
