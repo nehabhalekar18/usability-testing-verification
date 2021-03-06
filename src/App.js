@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import ExploreLocation from "./components/ExploreLocation";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import MyTrips from "./components/MyTrips";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact component={Explore} />
           <Route path="/login" exact component={Login} />
           <Route path="/location" exact component={ExploreLocation} />
+          <Route path="/trips" exact component={MyTrips} />
         </Switch>
       </Router>
 
