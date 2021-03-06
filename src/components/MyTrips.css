@@ -1,0 +1,75 @@
+.myTrips {
+  padding: 30px;
+  display: block;
+  overflow: auto;
+}
+.mainContainer {
+  height: fit-content;
+}
+.search__border {
+  border: 2px solid rgba(39, 35, 67, 0.1);
+  box-sizing: border-box;
+  border-radius: 100px;
+  height: 52px;
+}
+
+.search__input {
+  margin-top: 10px;
+  border: none;
+  outline-color: #fff;
+  min-width: 90%;
+  max-width: 90%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 26px;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.searchIcon {
+  margin-top: 10px;
+}
+
+.search__sort {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: end;
+}
+
+.sort__icon {
+  transform: rotate(90deg);
+  height: 30px;
+}
+
+.trip__tabs {
+  margin-top: 30px;
+}
+.trip__upcoming--active {
+  transition: transform 150ms ease-out;
+}
+.trip__upcoming--active:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.trip__completed {
+  transition: transform 150ms ease-out;
+  color: lightgrey;
+}
+.trip__completed:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  color: black;
+}
+
+.trip__create {
+  text-align: end;
+}
+
+.trip__detailComponent {
+  border: 1px solid black;
+  height: 70vh;
+  position: relative;
+}

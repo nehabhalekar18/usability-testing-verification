@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Explore from "./components/Explore";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import ExploreLocation from "./components/ExploreLocation";
 import ChatWindow from "./components/ChatWindow";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import MyTrips from "./components/MyTrips";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -17,17 +18,11 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/location" exact component={ExploreLocation} />
           <Route path="/chat" exact component={ChatWindow} />
+          <Route path="/trips" exact component={MyTrips} />
         </Switch>
       </Router>
 
-      {/* <Explore /> */}
-      {/* <ExploreLocation /> */}
-      {/* Sign In */}
-      {/* <Login /> */}
-
-      {/* Sign Up */}
       {/* Create Trip */}
-      {/* My Trip */}
       {/* Storybook */}
       {/* Footer */}
     </div>
