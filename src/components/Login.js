@@ -107,7 +107,7 @@ function Login({}) {
                 <input className="card__passBox_input" type="password" />
                 <VisibilityOffIcon />
               </div>
-              <p className="card__signUpCpwd">Confirm Password</p>
+              <p className="card__signUpCpwd">Password</p>
               <div className="card__PasswordBox">
                 <input className="card__passBox_input" type="password"></input>
                 <VisibilityOffIcon />
