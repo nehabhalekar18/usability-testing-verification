@@ -61,7 +61,8 @@
   box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
   border-radius: 16px;
   padding: 50px;
-  height: max-content;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .loginCard__info {
   align-items: center;
@@ -185,8 +186,8 @@ hr {
   height: 48px;
   border: none;
   outline-color: #fff;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 90%;
+  max-width: 90%;
   text-align: left;
   vertical-align: middle;
   padding-left: 26px;
@@ -241,4 +242,46 @@ hr {
 }
 .card__loginbtn:hover {
   transform: scale(1.02);
+}
+
+/* SIGN UP */
+
+.signup_card {
+  display: flex;
+  width: 436px;
+  background: #fffffe;
+  border: 1px solid #fffffe;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card__signUpemail {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 143px;
+  width: 62px;
+}
+
+.card__signUpPwd {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 225px;
+  width: 91px;
+}
+
+.card__signUpCpwd {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 307px;
+  width: 91px;
 }
