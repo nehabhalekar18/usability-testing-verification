@@ -1,0 +1,13 @@
+.explore {
+  margin: 40px;
+}
+.explore__loadMore__btn {
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

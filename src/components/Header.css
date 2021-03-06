@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+.header > h1 {
+  object-fit: contain;
+  margin-left: 20px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  /* max-width: fit-content; */
+  padding: 0 10px;
+  height: 30px;
+  justify-content: space-around;
+  max-width: 30vw;
+  margin-left: -28%;
+  margin-top: 1%;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.header__right__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20vw;
+  margin-right: 40px;
+}
+.header__signIn_btn {
+  background-color: #5969ff;
+  color: #ffffff;
+}
+.header__login_btn {
+  background-color: transparent;
+  color: #272343;
+}
+.header__right__buttons > button {
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 108px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header__user {
+  height: 40px;
+  max-width: inherit;
+  min-width: 40px;
+  border-radius: 999px;
+}

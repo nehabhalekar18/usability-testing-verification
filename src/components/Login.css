@@ -1,0 +1,287 @@
+.login {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.login__maincontainer {
+  background-image: url("../assets/login-img.jpg");
+
+  padding: 10vh;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+}
+.login__img {
+  max-width: 100%;
+}
+
+.card__content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.login__content1 {
+  width: 198px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #272343;
+}
+.login__content2 {
+  width: 520px;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 62px;
+  line-height: 70px;
+  color: #272343;
+}
+
+.login__content3 {
+  width: 390px;
+  margin-top: 30px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #020826;
+}
+
+.login__card {
+  display: flex;
+  width: 436px;
+  background: #fffffe;
+  border: 1px solid #fffffe;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.loginCard__info {
+  align-items: center;
+  text-align: center;
+}
+
+.login__cardtitle {
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #272343;
+  justify-content: center;
+}
+.login__cardtitle > p {
+  width: 300px;
+}
+
+.login__cardFbG {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: none;
+  margin: 0 auto;
+  align-items: flex-end;
+}
+.card__colFb {
+  text-align: right;
+}
+
+.card__colGoogle {
+  text-align: left;
+}
+.card__fbImg,
+.card__gImg {
+  width: 30px;
+  height: 30px;
+  transition: transform 150ms ease-out;
+}
+.card__fbImg:hover,
+.card__gImg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.loginCard__Or {
+  display: flex;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(39, 35, 67, 0.3);
+  padding: 0%;
+}
+
+hr {
+  margin: 1rem 0;
+  color: #020826;
+  background-color: black;
+  border: 1px;
+  opacity: 0.2;
+}
+.card__dash1 {
+  padding: 0%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card__dash2 {
+  padding: 0%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card__Or {
+  padding: 0%;
+}
+.card__inputs {
+  margin-top: 30px;
+  justify-content: flex-start;
+}
+
+.card__email {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 246px;
+  width: 62px;
+}
+.card__emailBox {
+  border: 2px solid rgba(39, 35, 67, 0.1);
+  box-sizing: border-box;
+  border-radius: 14px;
+  height: 52px;
+}
+
+.card__emailBox_input {
+  height: 48px;
+  border: none;
+  outline-color: #fff;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 26px;
+}
+.card__emailBox_input:focus {
+  outline: none;
+}
+
+.card__PasswordBox {
+  margin-top: 30px;
+  border: 2px solid rgba(39, 35, 67, 0.1);
+  box-sizing: border-box;
+  border-radius: 14px;
+  height: 52px;
+}
+
+.card__passBox_input {
+  height: 48px;
+  border: none;
+  outline-color: #fff;
+  min-width: 90%;
+  max-width: 90%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 26px;
+}
+.card__password {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 327px;
+  width: 91px;
+}
+.card__passBox_input:focus {
+  outline: none;
+}
+
+.card__inputDetails {
+  margin-top: 10px;
+}
+.card__signIn {
+  padding: 0;
+  text-align: left;
+}
+
+.card__fpass {
+  padding: 0;
+  text-align: right;
+}
+
+.card__buttons {
+  margin-top: 35px;
+}
+.card__signUpbtn,
+.card__loginbtn {
+  height: 47px;
+  border-radius: 12px;
+  min-width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 150ms ease-out;
+}
+
+.card__signUpCol,
+.card__LoginCol {
+  padding: 0;
+}
+
+.card__signUpbtn:hover {
+  background-color: white;
+  color: #272343;
+  transform: scale(1.02);
+}
+.card__loginbtn:hover {
+  transform: scale(1.02);
+}
+
+/* SIGN UP */
+
+.signup_card {
+  display: flex;
+  width: 436px;
+  background: #fffffe;
+  border: 1px solid #fffffe;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card__signUpemail {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 143px;
+  width: 62px;
+}
+
+.card__signUpPwd {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 225px;
+  width: 91px;
+}
+
+.card__signUpCpwd {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 307px;
+  width: 91px;
+}

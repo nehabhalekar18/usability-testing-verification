@@ -1,0 +1,10 @@
+.exploreLocation {
+  margin: 40px;
+}
+.exploreLocation > .banner {
+  margin-bottom: 30px;
+}
+.exploreLocation > h5 {
+  margin: 16px;
+  text-transform: uppercase;
+}
