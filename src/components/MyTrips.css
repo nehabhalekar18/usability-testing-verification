@@ -1,7 +1,5 @@
 .myTrips {
-  padding: 30px;
-  display: block;
-  overflow: auto;
+  margin: 40px;
 }
 .mainContainer {
   height: fit-content;
@@ -71,4 +69,12 @@
 .trip__detailComponent {
   border: 1px solid black;
   height: 100%;
+}
+
+.trip__cards {
+  margin-top: 30px;
+}
+
+.trip__card {
+  margin-top: 10px;
 }
