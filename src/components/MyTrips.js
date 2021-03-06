@@ -2,6 +2,7 @@ import React from "react";
 import "./MyTrips.css";
 import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SearchIcon from "@material-ui/icons/Search";
+import ChatWindow from "./ChatWindow";
 function MyTrips() {
   return (
     <div className="myTrips">
@@ -39,7 +40,7 @@ function MyTrips() {
           </div>
           <div className="row trip__detailComponent">
             Trip details component
-            <div></div>
+            <ChatWindow />
           </div>
         </div>
       </div>

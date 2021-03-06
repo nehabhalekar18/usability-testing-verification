@@ -70,5 +70,6 @@
 
 .trip__detailComponent {
   border: 1px solid black;
-  height: 100%;
+  height: 70vh;
+  position: relative;
 }
