@@ -18,7 +18,7 @@ function Location(locations) {
                 <LocationOnOutlinedIcon fontSize="small" />
                 <p>{location.subData}</p>
               </div>
-              <p>{location.description}</p>
+              <p className="truncate">{location.description}</p>
             </div>
           </div>
         </Link>

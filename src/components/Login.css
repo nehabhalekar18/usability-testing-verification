@@ -1,30 +1,41 @@
 .login {
-  position: relative;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.login__maincontainer {
+  background-image: url("../assets/login-img.jpg");
+
+  padding: 10vh;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
 }
 .login__img {
   max-width: 100%;
 }
 
+.card__content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .login__content1 {
-  position: absolute;
   width: 198px;
-  height: 24px;
-  left: 75px;
-  top: 200px;
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #020826;
+  color: #272343;
 }
 .login__content2 {
-  position: absolute;
   width: 520px;
-  height: 210px;
-  left: 75px;
-  top: 250px;
+  margin-top: 20px;
   font-style: normal;
   font-weight: 600;
   font-size: 62px;
@@ -33,100 +44,200 @@
 }
 
 .login__content3 {
-  position: absolute;
-  width: 310px;
-  height: 81px;
-  left: 75px;
-  top: 500px;
+  width: 390px;
+  margin-top: 30px;
   font-style: normal;
   font-size: 20px;
   line-height: 27px;
-  color: #ffffff;
+  color: #020826;
 }
 
 .login__card {
-  position: absolute;
+  display: flex;
   width: 436px;
-  height: 576px;
-  left: 924px;
-  top: 100px;
-
   background: #fffffe;
   border: 1px solid #fffffe;
   box-sizing: border-box;
-  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
   border-radius: 16px;
+  padding: 50px;
 }
-.login__cardtitle {
-  position: absolute;
-  width: 206px;
+.loginCard__info {
+  align-items: center;
+  text-align: center;
+}
 
-  top: 30px;
-  left: 120px;
+.login__cardtitle {
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  text-align: center;
   letter-spacing: 0.05em;
-
   color: #272343;
+  justify-content: center;
+}
+.login__cardtitle > p {
+  width: 300px;
 }
 
-.login__cardtext {
-  position: absolute;
-  top: 120px;
-  left: 160px;
+.login__cardFbG {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: none;
+  margin: 0 auto;
+  align-items: flex-end;
+}
+.card__colFb {
+  text-align: right;
 }
 
-.login__cardOR {
-  position: absolute;
-  top: 150px;
-  left: 100px;
-  width: 100px;
+.card__colGoogle {
+  text-align: left;
 }
-
-.login__OR {
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  left: 100px;
-  font-family: Inter;
+.card__fbImg,
+.card__gImg {
+  width: 30px;
+  height: 30px;
+  transition: transform 150ms ease-out;
+}
+.card__fbImg:hover,
+.card__gImg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.loginCard__Or {
+  display: flex;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.02em;
   color: rgba(39, 35, 67, 0.3);
+  padding: 0%;
 }
 
-.login__form {
-  position: absolute;
-  height: 40px;
-  left: 961px;
-  top: 300px;
-  width: 300px;
+hr {
+  margin: 1rem 0;
+  color: #020826;
+  background-color: black;
+  border: 1px;
+  opacity: 0.2;
 }
-.login__signup {
-  position: absolute;
-  width: 167px;
-  height: 52px;
-  left: 961px;
-  top: 500px;
+.card__dash1 {
+  padding: 0%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
-  border: 1px solid #5969ff;
+.card__dash2 {
+  padding: 0%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card__Or {
+  padding: 0%;
+}
+.card__inputs {
+  margin-top: 30px;
+  justify-content: flex-start;
+}
+
+.card__email {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 246px;
+  width: 62px;
+}
+.card__emailBox {
+  border: 2px solid rgba(39, 35, 67, 0.1);
   box-sizing: border-box;
-  border-radius: 16px;
+  border-radius: 14px;
+  height: 52px;
 }
 
-.login__loginbtn {
-  position: absolute;
-  width: 167px;
-  height: 52px;
-  left: 1149px;
-  top: 500px;
+.card__emailBox_input {
+  height: 48px;
+  border: none;
+  outline-color: #fff;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 26px;
+}
+.card__emailBox_input:focus {
+  outline: none;
+}
 
-  background: #272343;
+.card__PasswordBox {
+  margin-top: 30px;
+  border: 2px solid rgba(39, 35, 67, 0.1);
+  box-sizing: border-box;
+  border-radius: 14px;
+  height: 52px;
+}
+
+.card__passBox_input {
+  height: 48px;
+  border: none;
+  outline-color: #fff;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 26px;
+}
+.card__password {
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  left: 65px;
+  top: 327px;
+  width: 91px;
+}
+.card__passBox_input:focus {
+  outline: none;
+}
+
+.card__inputDetails {
+  margin-top: 10px;
+}
+.card__signIn {
+  padding: 0;
+  text-align: left;
+}
+
+.card__fpass {
+  padding: 0;
+  text-align: right;
+}
+
+.card__buttons {
+  margin-top: 35px;
+}
+.card__signUpbtn,
+.card__loginbtn {
+  height: 47px;
+  border-radius: 12px;
+  min-width: 100%;
+  max-width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  transition: transform 150ms ease-out;
+}
+
+.card__signUpCol,
+.card__LoginCol {
+  padding: 0;
+}
+
+.card__signUpbtn:hover {
+  background-color: white;
+  color: #272343;
+  transform: scale(1.02);
+}
+.card__loginbtn:hover {
+  transform: scale(1.02);
 }

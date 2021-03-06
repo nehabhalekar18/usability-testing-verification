@@ -1,5 +1,6 @@
 .exploreLocation {
   margin: 40px;
+  position: relative;
 }
 .exploreLocation > .banner {
   margin-bottom: 30px;
@@ -7,4 +8,35 @@
 .exploreLocation > h5 {
   margin: 16px;
   text-transform: uppercase;
+}
+.exploreLocation > .exploreLocation__tripButtons {
+  position: absolute;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+  margin-top: -4%;
+}
+.exploreLocation__tripButtons > button {
+  border-radius: 16px;
+  outline: none;
+  height: 32px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 12px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.exploreLocation__existingTrip {
+  background-color: #5969ff;
+  color: #ffffff;
+  border: none;
+  margin-right: 16px;
+}
+
+.exploreLocation__newTrip {
+  background-color: transparent;
+  color: #272343;
+  border: 1px solid #272343;
+  margin-right: 5px;
 }

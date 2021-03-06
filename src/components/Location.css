@@ -11,9 +11,10 @@
 .location__card {
   height: fit-content;
   background-color: #ffffff;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: block;
   border-radius: 10px;
+  border: 0.5px solid rgb(0, 0, 0, 0.05);
 }
 .location__card:hover {
   cursor: pointer;
@@ -44,4 +45,10 @@
 .location__data > p {
   font-size: 12px;
   margin: 2px 0 0 0;
+}
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

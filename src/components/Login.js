@@ -1,77 +1,91 @@
 import React from "react";
 import "./Login.css";
 import LoginBg from "../assets/login-img.jpg";
+import fb from "../assets/Facebook-Circled.png";
+import google from "../assets/Google.png";
 function Login() {
   return (
     <div className="login">
       <img src={LoginBg} alt="" className="login__img" />
-      <div>
-        <div class="col-sm-6 ">
+      <div class="row login__maincontainer">
+        <div class="col-sm-6 card__content">
           <div className="login__content1"> EXPLORE NEARBY PLACES</div>
           <div className="login__content2">
             Looking for new places to visit around the globe?
           </div>
           <div className="login__content3">
             Share your adventures with your close ones and save your memories in
-            a unique style
+            a unique style.
           </div>
         </div>
+
         <div class="col-sm-6 card login__card ">
-          <p class="card-title login__cardtitle">Login to continue exploring</p>
-          <p class="card-text login__cardtext">Facebook Google</p>
-          <p className="login__cardOR">
-            <div class="row card-text ">
-              <div class="col-sm login__cardhr-1"></div>
-              <div class="col-sm login__OR">OR</div>
-              <div class="col-sm login__cardhr-2"></div>
+          <div className="loginCard__info">
+            <div class="row login__cardtitle">
+              <p>Login to continue exploring</p>
             </div>
-          </p>
+            <div class="row login__cardFbG">
+              <div class="col-sm-5 card__colFb">
+                <img src={fb} className="card__fbImg" alt="" />
+                &nbsp;&nbsp;Facebook
+              </div>
+              <div class="col-sm-2"></div>
+              <div class="col-sm-5 card__colGoogle">
+                <img src={google} className="card__gImg" alt="" />
+                &nbsp;&nbsp;Google
+              </div>
+            </div>
+            <div className="row loginCard__Or">
+              <div class="col-sm-5 card__dash1">
+                {" "}
+                <hr />
+              </div>
+              <div class="col-sm-2 card__Or">OR</div>
+              <div class="col-sm-5 card__dash2">
+                {" "}
+                <hr />
+              </div>
+            </div>
+
+            <div class="row card__inputs">
+              <p className="card__email">Email</p>
+              <div className="card__emailBox">
+                <input className="card__emailBox_input" type="text" />
+              </div>
+              <p className="card__password">Password</p>
+              <div className="card__PasswordBox">
+                <input className="card__passBox_input" type="text" />
+              </div>
+            </div>
+
+            <div class="row card__inputDetails">
+              <div class="col-sm card__signIn">
+                {" "}
+                <input type="checkbox" /> Stay signed in?
+              </div>
+              <div class="col-sm card__fpass">Forgot Password ?</div>
+              <div></div>
+            </div>
+
+            <div class="row card__buttons">
+              <div class="col-sm-5 card__signUpCol">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary card__signUpbtn">
+                  Sign Up
+                </button>
+              </div>
+              <div class="col-sm-2 card__btnSpace"></div>
+              <div class="col-sm-5 card__LoginCol">
+                {" "}
+                <button type="button" class="btn btn-dark card__loginbtn">
+                  Login
+                </button>
+              </div>
+              <div></div>
+            </div>
+          </div>
         </div>
-        <form className="login__form">
-          <div class="form-group">
-            <label for="formGroupExampleInput">Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="formGroupExampleInput"
-              placeholder="Example input"
-            />
-          </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Password</label>
-            <input
-              type="text"
-              class="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Another input"
-            />
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="gridCheck"
-                  />
-                  <label class="form-check-label" for="gridCheck">
-                    Stay signed in
-                  </label>
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-group">Forgot password?</div>
-              </div>
-            </div>
-          </div>
-        </form>
-        <button type="button" class="btn btn-outline-primary login__signup">
-          Sign Up
-        </button>
-        <button type="button" class="btn btn-dark login__loginbtn">
-          Log In
-        </button>
       </div>
     </div>
   );

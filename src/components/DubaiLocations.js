@@ -1,10 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import CheckCircleOutlineSharpIcon from "@material-ui/icons/CheckCircleOutlineSharp";
+import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+import React, { useState } from "react";
 import "./DubaiLocations.css";
 
-function DubaiLocations({ locationList }) {
+function DubaiLocations({ locationList, login }) {
+  const [locationSelected, setLocationSelected] = useState(false);
   const locationsList = locationList.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
@@ -15,15 +16,21 @@ function DubaiLocations({ locationList }) {
           <div className="dubaiLocation__data">
             <div className="dubaiLocation__data__contents">
               <h4>{location.name}</h4>
-              <Link to="/login">
-                <AddCircleOutlineIcon />
-              </Link>
+              {locationSelected === true ? (
+                <div onClick={() => setLocationSelected(false)}>
+                  <CheckCircleOutlineSharpIcon />
+                </div>
+              ) : (
+                <div onClick={() => setLocationSelected(true)}>
+                  <AddCircleOutlineIcon />
+                </div>
+              )}
             </div>
             <div className="dubaiLocation__description">
               <LocationOnOutlinedIcon />
               <p>{location.subData}</p>
             </div>
-            <p>{location.description}</p>
+            <p className="truncate">{location.description}</p>
           </div>
         </div>
       </div>

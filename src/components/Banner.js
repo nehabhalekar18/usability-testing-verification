@@ -9,7 +9,11 @@ function Banner({ bannerImg, searchLocation }) {
       <img src={bannerImg} alt="" className="banner__img" />
       <div className="banner__search">
         <LocationOnOutlinedIcon />
-        <input type="text" placeholder="Location" value={searchLocation} />
+        <input
+          type="text"
+          placeholder="Location"
+          defaultValue={searchLocation}
+        />
         <SearchOutlinedIcon className="banner__search__icon" />
       </div>
       <div className="banner__content">
