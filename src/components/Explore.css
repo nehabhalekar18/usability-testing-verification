@@ -1,5 +1,6 @@
 .explore {
   margin: 40px;
+  position: relative;
 }
 .explore__loadMore__btn {
   padding: 10px;

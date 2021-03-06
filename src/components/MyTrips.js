@@ -4,6 +4,7 @@ import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SearchIcon from "@material-ui/icons/Search";
 import TripCardList from "./TripCardList";
 import tripCardList from "../constants/tripCardListData";
+import ChatWindow from "./ChatWindow";
 function MyTrips() {
   return (
     <div className="myTrips">
@@ -45,7 +46,7 @@ function MyTrips() {
           </div>
           <div className="row trip__detailComponent">
             Trip details component
-            <div></div>
+            <ChatWindow />
           </div>
         </div>
       </div>
