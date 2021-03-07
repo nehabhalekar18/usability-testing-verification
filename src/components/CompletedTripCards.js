@@ -6,6 +6,10 @@ import user3 from "../assets/user3.png";
 import addFriends from "../assets/addFriends.png";
 import "./CompletedTripCards.css";
 import completedTrips from "../constants/completedTrips";
+import EditIcon from "@material-ui/icons/Edit";
+
+import ShareIcon from "@material-ui/icons/Share";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function CompletedTripCards() {
   const allTrips = completedTrips.map((trip) => {
@@ -28,8 +32,32 @@ function CompletedTripCards() {
             <img className="userImg1" src={user2} alt="" />{" "}
           </div>
         </div>
-        <div className="col-sm-1 card__icon">
-          <MoreVertIcon />
+        <div className="col-sm-1 card__icon dropdown">
+          <MoreVertIcon
+            class="dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+          />{" "}
+          <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="#">
+                <ShareIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Share
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <EditIcon />
+                &nbsp;&nbsp;&nbsp;&nbsp; Edit
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <DeleteIcon />
+                &nbsp;&nbsp;&nbsp;&nbsp; Delete
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     );

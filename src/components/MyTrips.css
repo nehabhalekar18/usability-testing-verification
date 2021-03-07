@@ -44,22 +44,20 @@
 .trip__tabs {
   margin-top: 30px;
 }
-.trip__upcoming--active {
+.trip__upcoming {
   transition: transform 150ms ease-out;
 }
-.trip__upcoming--active:hover {
+.trip__upcoming:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
 
 .trip__completed {
   transition: transform 150ms ease-out;
-  color: lightgrey;
 }
 .trip__completed:hover {
   transform: scale(1.03);
   cursor: pointer;
-  color: black;
 }
 
 .trip__create {
@@ -108,4 +106,12 @@
   display: flex;
   justify-content: space-between;
   width: 200px;
+}
+.trip__upcoming > h6,
+.trip__completed > h6 {
+  opacity: 0.5;
+}
+
+.upcomingH--active {
+  opacity: 1 !important;
 }
