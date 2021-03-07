@@ -79,3 +79,33 @@
 .trip__card {
   margin-top: 10px;
 }
+
+.myTrips__details {
+  padding-left: 50px;
+  margin-top: 10px;
+}
+.myTrips__details__container {
+  border: 1px solid rgb(0, 0, 0, 0.15);
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
+  padding-left: 40px;
+}
+.myTrips__details__container__nav {
+  display: flex;
+  padding: 10px;
+}
+.myTrips__details__container__nav > button {
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  padding: 0;
+  margin-right: 20px;
+}
+.myTrips__details__container__data {
+  margin-left: 10px;
+}
+.myTrips__details__container__data__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}

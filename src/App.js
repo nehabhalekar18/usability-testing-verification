@@ -17,7 +17,7 @@ function App() {
           <Route path="/" exact component={Explore} />
           <Route path="/login" exact component={Login} />
           <Route path="/location" exact component={ExploreLocation} />
-          <Route path="/chat" exact component={ChatWindow} />
+          {/* <Route path="/chat" exact component={ChatWindow} /> */}
           <Route path="/trips" exact component={MyTrips} />
         </Switch>
       </Router>

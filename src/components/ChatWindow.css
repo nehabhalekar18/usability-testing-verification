@@ -1,17 +1,18 @@
 .chatWindow {
   position: absolute;
   z-index: 1;
+  margin-top: -88vh;
   /* margin-left: 848px;
   margin-top: 16px; */
 }
 .chatWindow__card {
-  width: 30vw;
+  width: 22vw;
   height: 80vh;
   background-color: #ffffff;
   border: rgba(0, 0, 0, 0.15);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  margin-left: 25vw;
+  margin-left: 30vw;
 }
 .chatWindow__nav {
   display: flex;
@@ -98,16 +99,18 @@
 /*-----------------------*/
 .chatWindow__chatTrigger {
   position: absolute;
-  background-color: rgb(89, 105, 255, 0.7);
+  background-color: rgb(89, 105, 255, 1);
   color: #ffffff;
   border-radius: 999px;
   border: none;
-  height: 80px;
-  width: 80px;
-  padding: 25px 12px;
+  height: 60px;
+  width: 60px;
+  padding: 18px 19px;
   text-align: center;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  margin-left: 50vw;
-  margin-top: 50vh;
+  /* margin-left: 50vw;
+  margin-top: 50vh; */
+  margin-left: 48vw;
+  margin-top: 0vh;
 }

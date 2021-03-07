@@ -4,7 +4,8 @@ import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SearchIcon from "@material-ui/icons/Search";
 import TripCardList from "./TripCardList";
 import tripCardList from "../constants/tripCardListData";
-import ChatWindow from "./ChatWindow";
+import TripDetails from "./TripDetails";
+
 function MyTrips() {
   return (
     <div className="myTrips">
@@ -38,15 +39,17 @@ function MyTrips() {
             </div>
           </div>
         </div>
-
-        <div className="col-sm-2"></div>
-        <div className="col-sm-6 myTrips__rightSection">
-          <div className="row trip__name">
-            <h6>Dubai Trip bon voyage</h6>
+        <div className="col-sm-8 myTrips__details">
+          <div className="myTrips__details__tripName">
+            <h4>Dubai Trip bon voyage</h4>
           </div>
-          <div className="row trip__detailComponent">
-            Trip details component
-            <ChatWindow />
+
+          <div className="myTrips__details__container">
+            <div className="myTrips__details__container__nav">
+              <button>Trip Details</button>
+              <button>Journal</button>
+            </div>
+            <TripDetails />
           </div>
         </div>
       </div>
