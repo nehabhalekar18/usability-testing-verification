@@ -1,0 +1,81 @@
+.tripCardList {
+  margin-top: 10px;
+  background: #fffffe;
+  border: 1px solid #f0eeee;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
+  border-radius: 16px;
+  padding: 0px;
+
+  border-bottom: 5px solid #5969ff;
+
+  position: inherit;
+  justify-content: inherit;
+  flex-direction: inherit;
+}
+
+.tripCardList:hover {
+  cursor: pointer;
+
+  border-bottom: 7px solid #4658fc;
+}
+
+.card__imgDiv {
+  height: fit-content;
+  padding: 0%;
+}
+
+.card_img {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  height: 130px;
+}
+
+.card__details {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+}
+
+.card__details > p {
+  padding: 0;
+  margin: 0%;
+}
+
+.card__tripName {
+  font-size: 17px;
+  font-weight: 500;
+}
+.card__icon {
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.card__userImgs {
+  margin-top: 15px;
+}
+.userImg,
+.userImg1 {
+  height: 35px;
+  transition: transform 150ms ease-out;
+}
+
+.userImg:hover {
+  height: 40px;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+.userImg1 {
+  margin-left: -17px;
+  transform: scale(1.2);
+}
+
+.userImg1:hover {
+  margin-left: 0px;
+  height: 40px;
+  margin-right: 10px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MyTrips.css";
 import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,6 +7,8 @@ import tripCardList from "../constants/tripCardListData";
 import TripDetails from "./TripDetails";
 
 function MyTrips() {
+  const [isUpcoming, setIsUpcoming] = useState(true);
+
   return (
     <div className="myTrips">
       <div className="row mainContainer">
@@ -26,16 +28,26 @@ function MyTrips() {
           </div>
           <div className="row trip__tabs">
             <div className="col-sm-3 trip__upcoming--active">
-              <h6 onClick={""}>Upcoming</h6>
+              <h6
+                onClick={(e) => {
+                  setIsUpcoming(true);
+                }}>
+                Upcoming
+              </h6>
             </div>
             <div className="col-sm-3 trip__completed">
-              <h6 onClick={""}>Completed</h6>
+              <h6
+                onClick={() => {
+                  setIsUpcoming(false);
+                }}>
+                Completed
+              </h6>
             </div>
             <div className="col-sm-6 trip__create">+ Create Trip</div>
           </div>
           <div className="row trip__cards">
             <div className="col">
-              <TripCardList tripdetails={tripCardList} />
+              <TripCardList isUpcoming={isUpcoming} />
             </div>
           </div>
         </div>
