@@ -1,77 +1,36 @@
 import React from "react";
-import PropTypes from "prop-types";
+import "bootstrap/dist/js/bootstrap.bundle";
 
-import Button from "@material-ui/core/Button";
-import Avatar from "@material-ui/core/Avatar";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-
-import ListItemText from "@material-ui/core/ListItemText";
-import EditIcon from "@material-ui/icons/Edit";
-import Dialog from "@material-ui/core/Dialog";
-import ShareIcon from "@material-ui/icons/Share";
-import DeleteIcon from "@material-ui/icons/Delete";
-
-import "./SimpleDialogDemo.css";
-
-function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
+function SimpleDialogDemo() {
   return (
-    <Dialog
-      className="ss"
-      onClose={handleClose}
-      aria-labelledby="simple-dialog-title"
-      open={open}>
-      <List>
-        <ListItem button onClick={() => handleListItemClick("share")}>
-          <ShareIcon className="del" />
-          <ListItemText primary="Share" />
-        </ListItem>
-        <ListItem button onClick={() => handleListItemClick("edit")}>
-          <EditIcon className="del" />
-          <ListItemText primary="Edit" />
-        </ListItem>
-        <ListItem button onClick={() => handleListItemClick("delete")}>
-          <DeleteIcon className="del" />
-          <ListItemText primary="Delete" />
-        </ListItem>
-      </List>
-    </Dialog>
-  );
-}
-
-SimpleDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-};
-
-export default function SimpleDialogDemo() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (value) => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-      <br />
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open simple dialog
-      </Button>
-      <SimpleDialog open={open} onClose={handleClose} />
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <a class="dropdown-item" href="#">
+            Action
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            Something else here
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
+
+export default SimpleDialogDemo;
