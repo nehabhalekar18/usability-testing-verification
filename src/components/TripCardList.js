@@ -7,66 +7,14 @@ import user3 from "../assets/user3.png";
 import addFriends from "../assets/addFriends.png";
 import tripCardList from "../constants/tripCardListData";
 import CompletedTripCards from "./CompletedTripCards";
-import PropTypes from "prop-types";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-
-import ListItemText from "@material-ui/core/ListItemText";
 import EditIcon from "@material-ui/icons/Edit";
-import Dialog from "@material-ui/core/Dialog";
+
 import ShareIcon from "@material-ui/icons/Share";
 import DeleteIcon from "@material-ui/icons/Delete";
-
-function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
-  return (
-    <Dialog
-      onClose={handleClose}
-      aria-labelledby="simple-dialog-title"
-      open={open}>
-      <List>
-        <ListItem button onClick={() => handleListItemClick("share")}>
-          <ShareIcon className="del" />
-          <ListItemText primary="Share" />
-        </ListItem>
-        <ListItem button onClick={() => handleListItemClick("edit")}>
-          <EditIcon className="del" />
-          <ListItemText primary="Edit" />
-        </ListItem>
-        <ListItem button onClick={() => handleListItemClick("delete")}>
-          <DeleteIcon className="del" />
-          <ListItemText primary="Delete" />
-        </ListItem>
-      </List>
-    </Dialog>
-  );
-}
-
-SimpleDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-};
+import FileCopyIcon from "@material-ui/icons/FileCopy";
+import EmailIcon from "@material-ui/icons/Email";
 
 function TripCardList({ isUpcoming }) {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (value) => {
-    setOpen(false);
-  };
-
   const tripCardsList =
     isUpcoming === true ? (
       tripCardList.map((trip) => {
@@ -79,21 +27,71 @@ function TripCardList({ isUpcoming }) {
               <p className="card__tripName">{trip.tripName}</p>
               <p>{trip.tripDate}</p>
               <div className="card__userImgs">
-                <img
-                  className="userImg"
-                  src={user1}
-                  alt=""
-                  data-tip="hello world"
-                />{" "}
-                <img className="userImg1" src={user3} alt="" />{" "}
-                <img className="userImg1" src={user2} alt="" />{" "}
-                <img className="userImg1" src={addFriends} alt="" />{" "}
+                <div>
+                  <img className="userImg" src={user1} alt="" />
+                </div>
+                <div>
+                  <img className="userImg1" src={user3} alt="" />{" "}
+                </div>
+                <div>
+                  {" "}
+                  <img className="userImg1" src={user2} alt="" />{" "}
+                </div>
+                <div class="dropdown">
+                  <img
+                    class="addUserImg dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    src={addFriends}
+                    alt=""
+                  />{" "}
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item" href="/">
+                        <EmailIcon />
+                        &nbsp;&nbsp;&nbsp;&nbsp; Invite via E-mail
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/">
+                        <FileCopyIcon />
+                        &nbsp;&nbsp;&nbsp;&nbsp; Copy link
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="col-sm-1 card__icon" onClick={handleClickOpen}>
-              <MoreVertIcon />{" "}
+            <div className="col-sm-1 card__icon dropdown">
+              <MoreVertIcon
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+              />{" "}
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a class="dropdown-item" href="/">
+                    <ShareIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Share
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/">
+                    <EditIcon />
+                    &nbsp;&nbsp;&nbsp;&nbsp; Edit
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/">
+                    <DeleteIcon />
+                    &nbsp;&nbsp;&nbsp;&nbsp; Delete
+                  </a>
+                </li>
+              </ul>
             </div>
-            <SimpleDialog open={open} onClose={handleClose} />
           </div>
         );
       })

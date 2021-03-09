@@ -8,6 +8,22 @@ import TripDetails from "./TripDetails";
 import TripDetailsNav from "./TripDetailsNav";
 
 function MyTrips() {
+  function setUpcoming() {
+    setIsUpcoming(true);
+    var upcoming = document.getElementById("upcomingId");
+    var completed = document.getElementById("completedId");
+    upcoming.classList.add("upcomingH--active");
+    completed.classList.remove("upcomingH--active");
+  }
+
+  function setCompleted() {
+    setIsUpcoming(false);
+    var upcoming = document.getElementById("upcomingId");
+    var completed = document.getElementById("completedId");
+    upcoming.classList.remove("upcomingH--active");
+    completed.classList.add("upcomingH--active");
+  }
+
   const [isUpcoming, setIsUpcoming] = useState(true);
   const [showTripDetails, setShowTripDetails] = useState(true);
   const [showJournal, setShowJournal] = useState(false);
@@ -34,18 +50,21 @@ function MyTrips() {
             </div>
           </div>
           <div className="row trip__tabs">
-            <div className="col-sm-3 trip__upcoming--active">
+            <div className="col-sm-3 trip__upcoming">
               <h6
+                id="upcomingId"
+                className="upcomingH--active"
                 onClick={(e) => {
-                  setIsUpcoming(true);
+                  setUpcoming();
                 }}>
                 Upcoming
               </h6>
             </div>
             <div className="col-sm-3 trip__completed">
               <h6
+                id="completedId"
                 onClick={() => {
-                  setIsUpcoming(false);
+                  setCompleted();
                 }}>
                 Completed
               </h6>
