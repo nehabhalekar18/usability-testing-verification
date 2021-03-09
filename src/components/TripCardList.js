@@ -21,14 +21,14 @@ function TripCardList({ isUpcoming }) {
         return (
           <div className="card row tripCardList">
             <div className="col-sm-4 card__imgDiv">
-              <img src={trip.img} className="card_img" />
+              <img src={trip.img} className="card_img" alt="" />
             </div>
             <div className="col-sm-7 card__details ">
               <p className="card__tripName">{trip.tripName}</p>
               <p>{trip.tripDate}</p>
               <div className="card__userImgs">
                 <div>
-                  <img className="userImg" src={user1} />{" "}
+                  <img className="userImg" src={user1} alt="" />
                 </div>
                 <div>
                   <img className="userImg1" src={user3} alt="" />{" "}
@@ -50,13 +50,13 @@ function TripCardList({ isUpcoming }) {
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="/">
                         <EmailIcon />
                         &nbsp;&nbsp;&nbsp;&nbsp; Invite via E-mail
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="/">
                         <FileCopyIcon />
                         &nbsp;&nbsp;&nbsp;&nbsp; Copy link
                       </a>
@@ -74,18 +74,18 @@ function TripCardList({ isUpcoming }) {
               />{" "}
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     <ShareIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Share
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     <EditIcon />
                     &nbsp;&nbsp;&nbsp;&nbsp; Edit
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     <DeleteIcon />
                     &nbsp;&nbsp;&nbsp;&nbsp; Delete
                   </a>

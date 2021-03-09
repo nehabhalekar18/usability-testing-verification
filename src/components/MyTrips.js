@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import "./MyTrips.css";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SearchIcon from "@material-ui/icons/Search";
+import SyncAltIcon from "@material-ui/icons/SyncAlt";
+import React, { useState } from "react";
+import Journal from "./Journal";
+import "./MyTrips.css";
 import TripCardList from "./TripCardList";
-import tripCardList from "../constants/tripCardListData";
 import TripDetails from "./TripDetails";
+import TripDetailsNav from "./TripDetailsNav";
 
 function MyTrips() {
   function setUpcoming() {
@@ -24,7 +25,13 @@ function MyTrips() {
   }
 
   const [isUpcoming, setIsUpcoming] = useState(true);
+  const [showTripDetails, setShowTripDetails] = useState(true);
+  const [showJournal, setShowJournal] = useState(false);
 
+  const showTab = (showTripDetails, showJournal) => {
+    setShowJournal(showJournal);
+    setShowTripDetails(showTripDetails);
+  };
   return (
     <div className="myTrips">
       <div className="row mainContainer">
@@ -74,13 +81,10 @@ function MyTrips() {
           <div className="myTrips__details__tripName">
             <h4>Dubai Trip bon voyage</h4>
           </div>
-
           <div className="myTrips__details__container">
-            <div className="myTrips__details__container__nav">
-              <button>Trip Details</button>
-              <button>Journal</button>
-            </div>
-            <TripDetails />
+            <TripDetailsNav contentDetails={showTab} />
+            {showTripDetails === true ? <TripDetails /> : null}
+            {showJournal === true ? <Journal /> : null}
           </div>
         </div>
       </div>
