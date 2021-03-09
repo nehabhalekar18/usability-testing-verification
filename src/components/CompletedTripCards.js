@@ -1,13 +1,13 @@
+import DeleteIcon from "@material-ui/icons/Delete";
+import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ShareIcon from "@material-ui/icons/Share";
 import React from "react";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
 import completedTrips from "../constants/completedTrips";
-import EditIcon from "@material-ui/icons/Edit";
-
-import ShareIcon from "@material-ui/icons/Share";
-import DeleteIcon from "@material-ui/icons/Delete";
+import "./CompletedTripCards.css";
 
 function CompletedTripCards() {
   const allTrips = completedTrips.map((trip) => {

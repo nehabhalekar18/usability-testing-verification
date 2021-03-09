@@ -13,6 +13,7 @@ import addFriends from "../assets/addFriends.png";
 function TripDetails() {
   return (
     <div className="tripDetails">
+      <ChatWindow />
       <div className="tripDetails__dateInput">
         <CalendarTodayIcon />
         <input type="text" defaultValue="Mar 11 - 19" />
@@ -49,7 +50,6 @@ function TripDetails() {
           <img className="userImg1" src={addFriends} alt="" />
         </div>
       </div>
-      <ChatWindow />
     </div>
   );
 }

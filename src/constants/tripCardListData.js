@@ -1,9 +1,5 @@
-import LondonImg from "../assets/london-img.jpg";
 import DubaiImg from "../assets/dubai-img.jpg";
-import FranceImg from "../assets/france-img.jpg";
-import GermanyImg from "../assets/germany-img.jpg";
-import AustraliaImg from "../assets/australia-img.jpg";
-import NewZealandImg from "../assets/newZealand-img.jpg";
+import LondonImg from "../assets/london-img.jpg";
 const tripCardList = [
   {
     id: 1,

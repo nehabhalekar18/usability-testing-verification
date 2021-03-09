@@ -31,11 +31,11 @@ function TripCardList({ isUpcoming }) {
                   <img className="userImg" src={user1} alt="" />
                 </div>
                 <div>
-                  <img className="userImg1" src={user3} alt="" />{" "}
+                  <img className="userImg1" src={user3} alt="" />
                 </div>
                 <div>
                   {" "}
-                  <img className="userImg1" src={user2} alt="" />{" "}
+                  <img className="userImg1" src={user2} alt="" />
                 </div>
                 <div class="dropdown">
                   <img
@@ -45,7 +45,7 @@ function TripCardList({ isUpcoming }) {
                     data-bs-toggle="dropdown"
                     src={addFriends}
                     alt=""
-                  />{" "}
+                  />
                   <ul
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1">
