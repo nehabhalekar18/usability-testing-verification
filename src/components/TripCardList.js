@@ -73,7 +73,7 @@ function TripCardList({ isUpcoming }) {
         return (
           <div className="card row tripCardList">
             <div className="col-sm-4 card__imgDiv">
-              <img src={trip.img} className="card_img" />
+              <img src={trip.img} className="card_img" alt="" />
             </div>
             <div className="col-sm-7 card__details ">
               <p className="card__tripName">{trip.tripName}</p>

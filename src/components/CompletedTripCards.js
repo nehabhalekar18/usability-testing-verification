@@ -1,18 +1,17 @@
-import React from "react";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import React from "react";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
-import addFriends from "../assets/addFriends.png";
-import "./CompletedTripCards.css";
 import completedTrips from "../constants/completedTrips";
+import "./CompletedTripCards.css";
 
 function CompletedTripCards() {
   const allTrips = completedTrips.map((trip) => {
     return (
       <div className="card row tripCardList">
         <div className="col-sm-4 card__imgDiv">
-          <img src={trip.img} className="card_img" />
+          <img src={trip.img} className="card_img" alt="" />
         </div>
         <div className="col-sm-7 card__details ">
           <p className="card__tripName">{trip.tripName}</p>
