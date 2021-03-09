@@ -1,0 +1,38 @@
+.journal {
+  margin: 10px 0;
+}
+.journal__card > img {
+  height: 80%;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  border-radius: 4px 4px 0 0;
+}
+.journal__card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: block;
+  border-radius: 4px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.journal__card__both > img {
+  height: 150px;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+}
+.journal__card__photo > img {
+  height: 100%;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  border-radius: 4px;
+}
+.journal__card__blog > p {
+  height: 100%;
+}
+
+.journal__card > p {
+  padding: 0 10px;
+  margin-bottom: 10px;
+  width: inherit;
+  font-size: 14px;
+}

@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import MyTrips from "./components/MyTrips";
 
 function App() {
-  const [login] = useState(false);
+  const [login] = useState(true);
   return (
     <div className="App">
       <Router>
@@ -16,7 +16,6 @@ function App() {
           <Route path="/" exact component={Explore} />
           <Route path="/login" exact component={Login} />
           <Route path="/location" exact component={ExploreLocation} />
-          {/* <Route path="/chat" exact component={ChatWindow} /> */}
           <Route path="/trips" exact component={MyTrips} />
         </Switch>
       </Router>
