@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Explore from "./components/Explore";
+import ExploreLocation from "./components/ExploreLocation";
 import Header from "./components/Header";
 import Login from "./components/Login";
-import ExploreLocation from "./components/ExploreLocation";
-import ChatWindow from "./components/ChatWindow";
 import MyTrips from "./components/MyTrips";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login] = useState(false);
   return (
     <div className="App">
       <Router>

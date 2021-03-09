@@ -1,9 +1,8 @@
+import SearchIcon from "@material-ui/icons/Search";
+import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import React, { useState } from "react";
 import "./MyTrips.css";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
-import SearchIcon from "@material-ui/icons/Search";
 import TripCardList from "./TripCardList";
-import tripCardList from "../constants/tripCardListData";
 import TripDetails from "./TripDetails";
 
 function MyTrips() {
