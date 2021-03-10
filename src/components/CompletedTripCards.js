@@ -8,7 +8,7 @@ import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
 import completedTrips from "../constants/completedTrips";
 import "./CompletedTripCards.css";
-
+import "bootstrap/dist/js/bootstrap.bundle";
 function CompletedTripCards() {
   const allTrips = completedTrips.map((trip) => {
     return (
