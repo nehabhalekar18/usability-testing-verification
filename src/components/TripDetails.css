@@ -1,0 +1,75 @@
+.tripDetails__dateInput > input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+  width: 100px;
+  cursor: none;
+}
+.tripDetails__dateInput {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  width: fit-content;
+  height: 42px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
+  margin-top: 10px;
+}
+.tripDetails__dateInput,
+.tripDetails__dateInput > input:hover {
+  cursor: pointer;
+}
+.tripDetails > h5 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.tripDetails__locationList {
+  display: flex;
+  flex-direction: column;
+}
+.tripDetails__locationList > div {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.tripDetails__vertical {
+  height: 52px;
+  width: 1px !important;
+  border: 1px solid #000000;
+  margin-left: 10px;
+}
+.tripDetails__locationList > small {
+  font-weight: 700;
+}
+.tripDetails__friends {
+  margin-bottom: 50px;
+}
+.tripDetails__friends > h5 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.card__userImgs {
+  display: flex;
+}
+.tripDetails__friends > .card__userImgs {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.tripDetails__friends > .card__userImgs > .userImg,
+.tripDetails__friends > .card__userImgs > .userImg1 {
+  height: 35px;
+}
+
+.tripDetails__friends > .card__userImgs > .userImg1 {
+  margin-left: -17px;
+}
+
+.addUserImg {
+  margin-left: -10px;
+  height: 45px;
+}

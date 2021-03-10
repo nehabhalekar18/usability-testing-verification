@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import LoginBg from "../assets/login-img.jpg";
 import fb from "../assets/Facebook-Circled.png";
 import google from "../assets/Google.png";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-function Login({}) {
-  return (
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
+function Login() {
+  const location = useLocation();
+  let history = useHistory();
+
+  useEffect(() => {}, [location]);
+
+  const isLogin = location.state.detail;
+
+  const [isLoginState, setIsLogin] = useState(isLogin);
+
+  const goToLogin = (login) => {
+    history.push({
+      pathname: "/login",
+      state: { detail: login },
+    });
+  };
+
+  return isLogin === "login" ? (
     <div className="login">
       <div class="row login__maincontainer">
         <div class="col-sm-6 card__content">
@@ -21,7 +41,7 @@ function Login({}) {
 
         {/* LOGIN */}
 
-        {/* <div class="col-sm-6 card login__card ">
+        <div class="col-sm-6 card login__card ">
           <div className="loginCard__info">
             <div class="row login__cardtitle">
               <p>Login to continue exploring</p>
@@ -56,7 +76,7 @@ function Login({}) {
               <p className="card__password">Password</p>
               <div className="card__PasswordBox">
                 <input className="card__passBox_input" type="password" />
-                    <VisibilityOffIcon />
+                <VisibilityOffIcon />
               </div>
             </div>
 
@@ -73,7 +93,10 @@ function Login({}) {
               <div class="col-sm-5 card__signUpCol">
                 <button
                   type="button"
-                  class="btn btn-outline-primary card__signUpbtn">
+                  class="btn btn-outline-primary card__signUpbtn"
+                  onClick={() => {
+                    goToLogin("MM");
+                  }}>
                   Sign Up
                 </button>
               </div>
@@ -87,7 +110,22 @@ function Login({}) {
               <div></div>
             </div>
           </div>
-        </div> */}
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div className="login">
+      <div class="row login__maincontainer">
+        <div class="col-sm-6 card__content">
+          <div className="login__content1"> EXPLORE NEARBY PLACES</div>
+          <div className="login__content2">
+            Looking for new places to visit around the globe?
+          </div>
+          <div className="login__content3">
+            Share your adventures with your close ones and save your memories in
+            a unique style.
+          </div>
+        </div>
 
         {/* SIGN UP */}
 
@@ -126,7 +164,10 @@ function Login({}) {
               <div class="col-sm-5 card__signUpCol">
                 <button
                   type="button"
-                  class="btn btn-outline-primary card__signUpbtn">
+                  class="btn btn-outline-primary card__signUpbtn"
+                  onClick={() => {
+                    goToLogin("login");
+                  }}>
                   Log In
                 </button>
               </div>

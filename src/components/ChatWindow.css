@@ -1,0 +1,109 @@
+.chatWindow {
+  position: absolute;
+  z-index: 1;
+}
+.chatWindow__card {
+  width: 22vw;
+  height: 500px;
+  background-color: #ffffff;
+  border: rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-left: 30vw;
+}
+.chatWindow__nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5969ff;
+  border-radius: 10px 10px 0 0;
+  padding: 12px;
+  color: #ffffff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+.chatWindow__nav_icon {
+  cursor: pointer;
+}
+.chatWindow__chatBox {
+  padding: 12px;
+  position: absolute;
+  width: inherit;
+}
+.chatWindow__chatBox__left,
+.chatWindow__chatBox__right {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chatWindow__chatBox__right {
+  justify-content: flex-end;
+}
+.chatWindow__chatBox__left > p,
+.chatWindow__chatBox__right > p {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 12px;
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+.chatWindow__chatBox__left > p {
+  margin-left: 12px;
+  border-radius: 999px 999px 999px 0;
+  min-height: 32px;
+  padding: 5px 12px;
+}
+.chatWindow__chatBox__right > p {
+  margin-right: 12px;
+  border-radius: 999px 999px 0 999px;
+  min-height: 32px;
+  padding: 5px 12px;
+}
+.chatWindow__chatBox__userImg {
+  height: 40px;
+
+  width: 40px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.chatWindow__input {
+  outline: none;
+  display: flex;
+  min-width: -webkit-fill-available;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+  padding: 0 12px;
+  margin-top: 390px;
+}
+.chatWindow__input > input {
+  height: 52px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.chatWindow__input > svg {
+  color: #5969ff;
+  opacity: 0.7;
+}
+.chatWindow__input > svg:hover {
+  color: #5969ff;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.2);
+}
+.chatWindow__chatTrigger {
+  position: fixed;
+  background-color: rgb(89, 105, 255, 1);
+  color: #ffffff;
+  border-radius: 999px;
+  border: none;
+  height: 60px;
+  width: 60px;
+  padding: 18px 19px;
+  text-align: center;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  margin-left: 50vw;
+  margin-top: 30vh;
+}
