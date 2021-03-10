@@ -1,0 +1,23 @@
+/* .storyBook {
+  
+} */
+
+.storyBook__row {
+  margin-right: 40px !important;
+  margin-left: 40px !important;
+  object-fit: contain;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+.storyBook__row > img {
+  height: 184px;
+  margin: 0.1%;
+}
+.storyBook_imgEnd {
+  margin-right: 40px !important;
+  position: inherit;
+}
+.storyBook_imgStart {
+  margin-left: 40px !important;
+}
