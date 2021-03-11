@@ -86,14 +86,14 @@ function Journal() {
   return (
     <div className="journal">
       <h6>01.02.2021</h6>
-      <h6>
+      <h6 className="journal__locationName">
         <LocationOnOutlinedIcon />
         Marina Beach Island
       </h6>
       <div className="row">{marinaBeach}</div>
       <br />
       <h6>01.02.2021</h6>
-      <h6>
+      <h6 className="journal__locationName">
         <LocationOnOutlinedIcon />
         Palm Island
       </h6>

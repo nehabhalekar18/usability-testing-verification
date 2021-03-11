@@ -86,7 +86,7 @@
   border: 1px solid rgb(0, 0, 0, 0.15);
   border-radius: 6px;
   box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
-  padding: 20px;
+  padding: 30px;
 }
 .trip__upcoming > h6,
 .trip__completed > h6 {

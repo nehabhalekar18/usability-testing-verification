@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import "./Login.css";
-import LoginBg from "../assets/login-img.jpg";
+import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import React, { useEffect } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import fb from "../assets/Facebook-Circled.png";
 import google from "../assets/Google.png";
-import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import "./Login.css";
 
-import { useHistory } from "react-router-dom";
 function Login() {
   const location = useLocation();
   let history = useHistory();
@@ -16,7 +13,7 @@ function Login() {
 
   const isLogin = location.state.detail;
 
-  const [isLoginState, setIsLogin] = useState(isLogin);
+  /* const [isLoginState, setIsLogin] = useState(isLogin); */
 
   const goToLogin = (login) => {
     history.push({
@@ -48,11 +45,12 @@ function Login() {
             </div>
             <div class="row login__cardFbG">
               <div class="col-sm-5 card__colFb">
-                <img src={fb} className="card__fbImg" /> &nbsp;&nbsp;Facebook
+                <img src={fb} className="card__fbImg" alt="" />{" "}
+                &nbsp;&nbsp;Facebook
               </div>
               <div class="col-sm-2"></div>
               <div class="col-sm-5 card__colGoogle">
-                <img src={google} className="card__gImg" />
+                <img src={google} className="card__gImg" alt="" />
                 &nbsp;&nbsp;Google
               </div>
             </div>

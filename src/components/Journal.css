@@ -1,6 +1,9 @@
 .journal {
   margin: 10px 0;
 }
+.journal__locationName {
+  margin-left: -5px;
+}
 .journal__card > img {
   height: 80%;
   max-width: -webkit-fill-available;

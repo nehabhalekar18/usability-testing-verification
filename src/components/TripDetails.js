@@ -1,19 +1,21 @@
-import React from "react";
-import "./TripDetails.css";
-import ChatWindow from "./ChatWindow";
+import AddIcon from "@material-ui/icons/Add";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+import React from "react";
+import addFriends from "../assets/addFriends.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
-import addFriends from "../assets/addFriends.png";
+import ChatWindow from "./ChatWindow";
+import "./TripDetails.css";
 
 function TripDetails() {
   return (
     <div className="tripDetails">
       <ChatWindow />
+
       <div className="tripDetails__dateInput">
         <CalendarTodayIcon />
         <input type="text" defaultValue="Mar 11 - 19" />
@@ -28,7 +30,7 @@ function TripDetails() {
         </div>
         <div className="tripDetails__vertical"></div>
         <div>
-          <FiberManualRecordIcon fontSize="small" />
+          <FiberManualRecordIcon className="tripDetails__locationList__joinPoint" />
           <h6>Cove Beach</h6>
           <DeleteOutlinedIcon />
         </div>
@@ -38,7 +40,10 @@ function TripDetails() {
           <h6>Desert Safari</h6>
           <DeleteOutlinedIcon />
         </div>
-        <small>+ Add more locations</small>
+        <div className="tripDetails__locationList__addLocations">
+          <AddIcon fontSize="small" />
+          <p>Add locations</p>
+        </div>
       </div>
 
       <div className="tripDetails__friends">
