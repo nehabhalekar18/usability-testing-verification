@@ -16,7 +16,7 @@
   align-items: center;
   padding-left: 12px;
   box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .tripDetails__dateInput,
 .tripDetails__dateInput > input:hover {
@@ -40,10 +40,28 @@
   height: 52px;
   width: 1px !important;
   border: 1px solid #000000;
-  margin-left: 10px;
+  margin-left: 11px;
 }
-.tripDetails__locationList > small {
-  font-weight: 700;
+.tripDetails__locationList__joinPoint {
+  padding-left: 3px;
+  margin-top: 3px;
+  font-size: 20px !important;
+}
+.tripDetails__locationList__addLocations {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.tripDetails__locationList__addLocations:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0645ad;
+}
+.tripDetails__locationList__addLocations > p {
+  margin: 0;
 }
 .tripDetails__friends {
   margin-bottom: 50px;

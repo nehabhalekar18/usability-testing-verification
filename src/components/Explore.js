@@ -21,11 +21,12 @@ function Explore() {
       {/* Location */}
       <Location locations={locations} />
       {loadMoreBtn ? (
-        <div className="explore__loadMore__btn">
-          <button type="button" className="btn btn-primary" onClick={loadMore}>
-            Load More
-          </button>
-        </div>
+        <button
+          className="explore__loadMore__btn"
+          type="button"
+          onClick={loadMore}>
+          Load More
+        </button>
       ) : null}
     </div>
   );

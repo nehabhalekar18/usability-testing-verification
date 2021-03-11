@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { useHistory } from "react-router-dom";
 import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
-import { useHistory } from "react-router-dom";
 
 function Header({ signedIn }) {
   let history = useHistory();
