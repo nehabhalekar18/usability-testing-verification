@@ -97,7 +97,7 @@ function Login(props) {
               <div className="col-sm-2 card__btnSpace"></div>
               <div className="col-sm-5 card__LoginCol">
                 {" "}
-                <Link to={{ pathname: "/location", state: { isLogin: true } }}>
+                <Link to={{ pathname: "/trips", state: { isLogin: true } }}>
                   <button type="button" className="btn btn-dark card__loginbtn">
                     Login
                   </button>
