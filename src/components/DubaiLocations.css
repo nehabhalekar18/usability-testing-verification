@@ -7,7 +7,7 @@
 .dubaiLocation__card {
   height: fit-content;
   background-color: #ffffff;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
   display: block;
   border-radius: 10px;
 }
@@ -46,4 +46,7 @@
 .dubaiLocation__data__contents > a {
   text-decoration: none;
   color: inherit;
+}
+.dubaiLocation__data__contents__icon {
+  cursor: pointer;
 }

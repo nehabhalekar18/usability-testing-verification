@@ -1,9 +1,9 @@
+import React from "react";
 import AddIcon from "@material-ui/icons/Add";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
-import React from "react";
 import addFriends from "../assets/addFriends.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
@@ -15,7 +15,6 @@ function TripDetails() {
   return (
     <div className="tripDetails">
       <ChatWindow />
-
       <div className="tripDetails__dateInput">
         <CalendarTodayIcon />
         <input type="text" defaultValue="Mar 11 - 19" />
