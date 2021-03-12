@@ -6,3 +6,7 @@ a:hover {
   text-decoration: none;
   color: #0645ad;
 }
+
+.App {
+  background: #fafafb;
+}

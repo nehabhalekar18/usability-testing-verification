@@ -10,10 +10,10 @@
 }
 .location__card {
   height: fit-content;
-  background-color: #ffffff;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
   display: block;
-  border-radius: 10px;
 }
 .location__card:hover {
   cursor: pointer;
@@ -23,25 +23,31 @@
   height: 180px;
   max-width: -webkit-fill-available;
   min-width: -webkit-fill-available;
-  border-radius: 8px 8px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 .location__data {
-  padding: 10px;
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
   display: block;
 }
-.location__data > h4 {
+.location__data > h6 {
   margin: unset;
+  text-transform: uppercase;
 }
 .location__description {
   margin-top: 10px;
   display: flex;
+  margin-left: -4px;
 }
-.location__description > p {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.location__description > p,
+
 .location__data > p {
   font-size: 12px;
   margin: 2px 0 0 0;
+}
+.location__description > p {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 5px;
 }

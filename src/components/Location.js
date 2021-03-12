@@ -12,7 +12,7 @@ function Location({ locations, isLogin }) {
               <img src={location.img} alt="" className="location__img" />
             </div>
             <div className="location__data">
-              <h4>{location.name}</h4>
+              <h6>{location.name}</h6>
               <div className="location__description">
                 <LocationOnOutlinedIcon fontSize="small" />
                 <p>{location.subData}</p>
