@@ -5,7 +5,7 @@ import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
 
-function Header({ signedIn }) {
+function Header({ signedIn, pathName }) {
   let history = useHistory();
 
   const goToLogin = (login) => {
@@ -16,7 +16,7 @@ function Header({ signedIn }) {
   };
 
   return signedIn === true ? (
-    <div className="header">
+    <div className={pathName === "/login" ? "tranparentHeader" : "header"}>
       <Link to="/">
         <img src={LogoImg} alt="" className="header__logo" />
       </Link>
@@ -30,7 +30,7 @@ function Header({ signedIn }) {
       </div>
     </div>
   ) : (
-    <div className="header">
+    <div className={pathName === "/login" ? "tranparentHeader" : "header"}>
       <Link to="/">
         <img src={LogoImg} alt="" className="header__logo" />
       </Link>

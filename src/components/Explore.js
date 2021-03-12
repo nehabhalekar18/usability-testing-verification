@@ -11,7 +11,7 @@ function Explore({ isLogin }) {
   var items = locationList.slice(0, 8);
   const [locations, setLocations] = useState(items);
   const loadMore = () => {
-    setLocations([locationList.location]);
+    setLocations(locationList);
     setLoadMoreBtn(false);
   };
   return (
