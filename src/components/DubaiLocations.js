@@ -1,11 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
+import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+import React, { useState } from "react";
 import "./DubaiLocations.css";
 
 function DubaiLocations({ locationList }) {
-  const locationsList = locationList.map((location) => {
+  const [locations, setLoctionList] = useState(locationList);
+  const updateLocationState = (id) => {
+    let newLocations = [...locations];
+    newLocations.map((location, i) => {
+      if (location.id === id) {
+        newLocations[i].state = !newLocations[i].state;
+      }
+      setLoctionList(newLocations);
+      return 0;
+    });
+  };
+
+  const locationsList = locations.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
         <div className="dubaiLocation__card">
@@ -15,9 +27,21 @@ function DubaiLocations({ locationList }) {
           <div className="dubaiLocation__data">
             <div className="dubaiLocation__data__contents">
               <h4>{location.name}</h4>
-              <Link to="/login">
-                <AddCircleOutlineIcon />
-              </Link>
+              {location.state === true ? (
+                <CheckCircleOutlineIcon
+                  className="dubaiLocation__data__contents__icon"
+                  onClick={() => {
+                    updateLocationState(location.id);
+                  }}
+                />
+              ) : (
+                <AddCircleOutlineIcon
+                  className="dubaiLocation__data__contents__icon"
+                  onClick={() => {
+                    updateLocationState(location.id);
+                  }}
+                />
+              )}
             </div>
             <div className="dubaiLocation__description">
               <LocationOnOutlinedIcon />

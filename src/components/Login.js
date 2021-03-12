@@ -1,31 +1,27 @@
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import React, { useEffect } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import fb from "../assets/Facebook-Circled.png";
 import google from "../assets/Google.png";
 import "./Login.css";
 
-function Login() {
+function Login(props) {
   const location = useLocation();
   let history = useHistory();
-
   useEffect(() => {}, [location]);
-
-  const isLogin = location.state.detail;
-
-  /* const [isLoginState, setIsLogin] = useState(isLogin); */
+  const isLogin = props.location.state.isLogin;
 
   const goToLogin = (login) => {
     history.push({
       pathname: "/login",
-      state: { detail: login },
+      state: { isLogin: login },
     });
   };
 
   return isLogin === "login" ? (
     <div className="login">
-      <div class="row login__maincontainer">
-        <div class="col-sm-6 card__content">
+      <div className="row login__maincontainer">
+        <div className="col-sm-6 card__content">
           <div className="login__content1"> EXPLORE NEARBY PLACES</div>
           <div className="login__content2">
             Looking for new places to visit around the globe?
@@ -38,35 +34,35 @@ function Login() {
 
         {/* LOGIN */}
 
-        <div class="col-sm-6 card login__card ">
+        <div className="col-sm-6 card login__card ">
           <div className="loginCard__info">
-            <div class="row login__cardtitle">
+            <div className="row login__cardtitle">
               <p>Login to continue exploring</p>
             </div>
-            <div class="row login__cardFbG">
-              <div class="col-sm-5 card__colFb">
+            <div className="row login__cardFbG">
+              <div className="col-sm-5 card__colFb">
                 <img src={fb} className="card__fbImg" alt="" />{" "}
                 &nbsp;&nbsp;Facebook
               </div>
-              <div class="col-sm-2"></div>
-              <div class="col-sm-5 card__colGoogle">
+              <div className="col-sm-2"></div>
+              <div className="col-sm-5 card__colGoogle">
                 <img src={google} className="card__gImg" alt="" />
                 &nbsp;&nbsp;Google
               </div>
             </div>
             <div className="row loginCard__Or">
-              <div class="col-sm-5 card__dash1">
+              <div className="col-sm-5 card__dash1">
                 {" "}
                 <hr />
               </div>
-              <div class="col-sm-2 card__Or">OR</div>
-              <div class="col-sm-5 card__dash2">
+              <div className="col-sm-2 card__Or">OR</div>
+              <div className="col-sm-5 card__dash2">
                 {" "}
                 <hr />
               </div>
             </div>
 
-            <div class="row card__inputs">
+            <div className="row card__inputs">
               <p className="card__email">Email</p>
               <div className="card__emailBox">
                 <input className="card__emailBox_input" type="text" />
@@ -78,32 +74,34 @@ function Login() {
               </div>
             </div>
 
-            <div class="row card__inputDetails">
-              <div class="col-sm card__signIn">
+            <div className="row card__inputDetails">
+              <div className="col-sm card__signIn">
                 {" "}
                 <input type="checkbox" /> Stay signed in?
               </div>
-              <div class="col-sm card__fpass">Forgot Password ?</div>
+              <div className="col-sm card__fpass">Forgot Password ?</div>
               <div></div>
             </div>
 
-            <div class="row card__buttons">
-              <div class="col-sm-5 card__signUpCol">
+            <div className="row card__buttons">
+              <div className="col-sm-5 card__signUpCol">
                 <button
                   type="button"
-                  class="btn btn-outline-primary card__signUpbtn"
+                  className="btn btn-outline-primary card__signUpbtn"
                   onClick={() => {
                     goToLogin("MM");
                   }}>
                   Sign Up
                 </button>
               </div>
-              <div class="col-sm-2 card__btnSpace"></div>
-              <div class="col-sm-5 card__LoginCol">
+              <div className="col-sm-2 card__btnSpace"></div>
+              <div className="col-sm-5 card__LoginCol">
                 {" "}
-                <button type="button" class="btn btn-dark card__loginbtn">
-                  Login
-                </button>
+                <Link to={{ pathname: "/location", state: { isLogin: true } }}>
+                  <button type="button" className="btn btn-dark card__loginbtn">
+                    Login
+                  </button>
+                </Link>
               </div>
               <div></div>
             </div>
@@ -113,8 +111,8 @@ function Login() {
     </div>
   ) : (
     <div className="login">
-      <div class="row login__maincontainer">
-        <div class="col-sm-6 card__content">
+      <div className="row login__maincontainer">
+        <div className="col-sm-6 card__content">
           <div className="login__content1"> EXPLORE NEARBY PLACES</div>
           <div className="login__content2">
             Looking for new places to visit around the globe?
@@ -127,13 +125,13 @@ function Login() {
 
         {/* SIGN UP */}
 
-        <div class="col-sm-6 card login__card">
+        <div className="col-sm-6 card login__card">
           <div className="loginCard__info">
-            <div class="row login__cardtitle">
+            <div className="row login__cardtitle">
               <p>Create account to continue exploring</p>
             </div>
 
-            <div class="row card__inputs">
+            <div className="row card__inputs">
               <p className="card__signUpemail">Email</p>
               <div className="card__emailBox">
                 <input className="card__emailBox_input" type="text" />
@@ -150,29 +148,29 @@ function Login() {
               </div>
             </div>
 
-            <div class="row card__inputDetails">
-              <div class="col-sm card__signIn">
+            <div className="row card__inputDetails">
+              <div className="col-sm card__signIn">
                 {" "}
                 <input type="checkbox" /> By accepting I agree to terms and
                 privacy policies as mentioned.
               </div>
             </div>
 
-            <div class="row card__buttons">
-              <div class="col-sm-5 card__signUpCol">
+            <div className="row card__buttons">
+              <div className="col-sm-5 card__signUpCol">
                 <button
                   type="button"
-                  class="btn btn-outline-primary card__signUpbtn"
+                  className="btn btn-outline-primary card__signUpbtn"
                   onClick={() => {
                     goToLogin("login");
                   }}>
                   Log In
                 </button>
               </div>
-              <div class="col-sm-2 card__btnSpace"></div>
-              <div class="col-sm-5 card__LoginCol">
+              <div className="col-sm-2 card__btnSpace"></div>
+              <div className="col-sm-5 card__LoginCol">
                 {" "}
-                <button type="button" class="btn btn-dark card__loginbtn">
+                <button type="button" className="btn btn-dark card__loginbtn">
                   Sign Up
                 </button>
               </div>
