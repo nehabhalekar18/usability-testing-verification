@@ -4,6 +4,12 @@
 .mainContainer {
   height: fit-content;
 }
+
+.trip__cards {
+  /* overflow-y: scroll; */
+  /* height: 90vh;
+  scroll-behavior: smooth; */
+}
 .search__border {
   border: 2px solid rgba(39, 35, 67, 0.1);
   box-sizing: border-box;
@@ -14,16 +20,19 @@
 .search__input {
   margin-top: 10px;
   border: none;
-  outline-color: #fff;
+  outline-color: #fafafb;
   min-width: 90%;
   max-width: 90%;
   text-align: left;
   vertical-align: middle;
-  padding-left: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fafafb;
 }
 
 .search__input:focus {
   outline: none;
+  background: #fafafb;
 }
 
 .searchIcon {
@@ -46,6 +55,8 @@
 }
 .trip__upcoming {
   transition: transform 150ms ease-out;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .trip__upcoming:hover {
   transform: scale(1.03);
@@ -54,6 +65,8 @@
 
 .trip__completed {
   transition: transform 150ms ease-out;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .trip__completed:hover {
   transform: scale(1.03);
@@ -64,6 +77,16 @@
   text-align: end;
 }
 
+.trip__create > button {
+  background-color: #5969ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 .trip__detailComponent {
   border: 1px solid black;
   height: 70vh;
@@ -71,7 +94,7 @@
 }
 
 .trip__cards {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .trip__card {
@@ -83,9 +106,10 @@
   margin-top: 10px;
 }
 .myTrips__details__container {
-  border: 1px solid rgb(0, 0, 0, 0.15);
-  border-radius: 6px;
-  box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(89, 105, 255, 0.24);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 30px;
 }
 .trip__upcoming > h6,

@@ -1,3 +1,6 @@
+.tripDetails {
+  height: 60vh;
+}
 .tripDetails__dateInput > input {
   border: none;
   outline: none;
@@ -67,7 +70,7 @@
   margin-bottom: 50px;
 }
 .tripDetails__friends > h5 {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 10px;
 }
@@ -75,7 +78,7 @@
   display: flex;
 }
 .tripDetails__friends > .card__userImgs {
-  margin-top: 15px;
+  margin-top: 0px;
   margin-left: 10px;
 }
 .tripDetails__friends > .card__userImgs > .userImg,

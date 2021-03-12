@@ -1,6 +1,6 @@
 .chatWindow {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 .chatWindow__card {
   width: 22vw;
@@ -10,6 +10,7 @@
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin-left: 30vw;
+  margin-top: -5vh;
 }
 .chatWindow__nav {
   display: flex;

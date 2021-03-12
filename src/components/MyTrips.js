@@ -69,7 +69,9 @@ function MyTrips() {
                 Completed
               </h6>
             </div>
-            <div className="col-sm-6 trip__create">+ Create Trip</div>
+            <div className="col-sm-6 trip__create">
+              <button> + Create Trip</button>
+            </div>
           </div>
           <div className="row trip__cards">
             <div className="col">
