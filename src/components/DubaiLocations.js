@@ -26,7 +26,7 @@ function DubaiLocations({ locationList }) {
           </div>
           <div className="dubaiLocation__data">
             <div className="dubaiLocation__data__contents">
-              <h4>{location.name}</h4>
+              <h6>{location.name}</h6>
               {location.state === true ? (
                 <CheckCircleOutlineIcon
                   className="dubaiLocation__data__contents__icon"
