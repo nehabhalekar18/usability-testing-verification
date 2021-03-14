@@ -2,6 +2,7 @@
   "name": "trip-buddy-app",
   "version": "0.1.0",
   "private": true,
+
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -11,6 +12,7 @@
     "bootstrap": "^5.0.0-beta2",
     "bootstrap-icons": "^1.4.0",
     "materialui-daterange-picker": "^1.1.92",
+    "mocha": "^8.3.2",
     "react": "^17.0.1",
     "react-date-range": "^1.1.3",
     "react-dom": "^17.0.1",
@@ -24,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,5 +46,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/register": "^7.13.8",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.4",
+    "ignore-styles": "^5.0.1",
+    "mocha-jsdom": "^2.0.0"
   }
 }
