@@ -2,6 +2,7 @@ import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Location.css";
+
 function Location({ locations, isLogin }) {
   const locationList = locations.map((location) => {
     return (

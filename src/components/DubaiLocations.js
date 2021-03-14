@@ -23,7 +23,8 @@ function DubaiLocations({ locationList, getSelected }) {
     getSelected(selectedLocations);
   };
 
-  const locationsList = locations.map((location) => {
+  //replace locationList with locations
+  const locationsList = locationList.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
         <div className="dubaiLocation__card">
