@@ -8,8 +8,8 @@ import ChatUser3 from "../assets/chat-img-3.jpg";
 import UserImg from "../assets/user-img.jpg";
 import "./ChatWindow.css";
 
-function ChatWindow() {
-  const [showChat, setShowChat] = useState(true);
+function ChatWindow({ showChatValue }) {
+  const [showChat, setShowChat] = useState(showChatValue);
   const [showChatTrigger, setShowChatTrigger] = useState(false);
   const toggleChat = () => {
     setShowChat(!showChat);

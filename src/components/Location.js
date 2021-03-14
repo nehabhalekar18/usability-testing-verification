@@ -6,7 +6,7 @@ function Location({ locations, isLogin }) {
   const locationList = locations.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
-        <Link to={{ pathname: "/location", state: { isLogin: { isLogin } } }}>
+        <Link to={{ pathname: "/location", state: { isLogin: isLogin } }}>
           <div className="location__card">
             <div className="location__img">
               <img src={location.img} alt="" className="location__img" />

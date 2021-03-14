@@ -23,14 +23,13 @@ function App() {
       <Header signedIn={login} pathName={pathName} />
       <Switch>
         <Route path="/" exact render={() => <Explore isLogin={false} />} />
-        <Route path="/login" render={(props) => <Login {...props} />} />
+        <Route path="/login" exact render={(props) => <Login {...props} />} />
         <Route
           path="/location"
+          exact
           render={(props) => <ExploreLocation {...props} />}
         />
-        <Route path="/trips" exact component={MyTrips} />
-        {/* <Route path="/" exact component={Explore} /> */}
-        {/* <Route path="/location" exact component={ExploreLocation} /> */}
+        <Route path="/trips" exact render={(props) => <MyTrips {...props} />} />
       </Switch>
       <Footer />
     </div>
