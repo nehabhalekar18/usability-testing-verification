@@ -1,4 +1,4 @@
-.tripCard {
+.newTripCard {
   margin-top: 10px;
   background: #fffffe;
   border: 1px solid #f0eeee;
@@ -6,72 +6,61 @@
   box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
   border-radius: 16px;
   padding: 0px;
-  border-bottom: 5px solid lightgray;
+  border-bottom: 5px solid #5969ff;
   position: inherit;
   justify-content: inherit;
   flex-direction: inherit;
 }
-
-.tripCard:hover {
-  cursor: pointer;
-
-  border-bottom: 7px solid #4658fc;
-}
-
-.tripCard__cardImg {
+.newTripCard__cardImg {
   height: fit-content;
   padding: 0%;
 }
-
-.tripCard__cardImg > img {
+.newTripCard__cardImg > img {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   max-width: -webkit-fill-available;
   min-width: -webkit-fill-available;
   height: 130px;
 }
-
-.tripCard__details {
+.newTripCard__cardDetails {
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 20px;
 }
-
-.tripCard__details > p {
+.newTripCard__nameInput {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
   padding: 0;
   margin: 0%;
   font-size: 17px;
   font-weight: 500;
 }
-
-.tripCard__options {
+.newTripCard__dateInput {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 160px;
+  justify-content: space-between;
+}
+.newTripCard__dateInput > input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+.newTripCard_inviteFriends {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  width: 130px;
+}
+.newTripCard_inviteFriends > p {
+  margin: 0;
+}
+.newTripCard__cardOption {
   margin-top: 10px;
   margin-left: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
-}
-
-.tripCard__userImgs {
-  margin-top: 15px;
-}
-.tripCard__userImg,
-.tripCard__userImg1 {
-  height: 35px;
-  transition: transform 150ms ease-out;
-}
-
-.tripCard__userImg:hover {
-  height: 40px;
-  margin-right: 10px;
-  transform: scale(1.2);
-}
-.tripCard__userImg1 {
-  margin-left: -17px;
-  transform: scale(1.2);
-}
-
-.tripCard__userImg1:hover {
-  margin-left: 0px;
-  height: 40px;
-  margin-right: 10px;
 }

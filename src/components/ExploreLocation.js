@@ -9,6 +9,7 @@ import "./ExploreLocation.css";
 
 function ExploreLocation(props) {
   const [login, setLogin] = useState(props.location.state.isLogin);
+  const [selectedLocations, setSelectedLocations] = useState("");
   var topSightsList = dubaiLocations.slice(0, 4);
   var beachList = dubaiLocations.slice(4, 8);
   return (
@@ -17,7 +18,15 @@ function ExploreLocation(props) {
       <div className="exploreLocation__category">
         <h5>Top Sights</h5>
         <div className="exploreLocation__category__buttons">
-          <Link to={{ pathname: "/login", state: { isLogin: { login } } }}>
+          <Link
+            to={{
+              pathname: "/login",
+              state: {
+                isLogin: login,
+                action: "createTrip",
+                locationList: selectedLocations,
+              },
+            }}>
             <button
               className="exploreLocation__createTrip"
               onClick={() => setLogin(true)}>
@@ -25,18 +34,40 @@ function ExploreLocation(props) {
               Create Trip
             </button>
           </Link>
-          {login === true ? (
+          <Link
+            to={{
+              pathname: "/login",
+              state: {
+                isLogin: login,
+                action: "addTrip",
+                locationList: selectedLocations,
+              },
+            }}>
+            <button
+              className="exploreLocation__addTrip"
+              onClick={() => setLogin(true)}>
+              <AddIcon />
+              Add to Trip
+            </button>
+          </Link>
+          {/* {login === true ? (
             <button className="exploreLocation__addTrip">
               <AddIcon />
               Add to Trip
             </button>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
 
-      <DubaiLocations locationList={topSightsList} />
+      <DubaiLocations
+        locationList={topSightsList}
+        getSelected={(locations) => setSelectedLocations(locations)}
+      />
       <h5>Beaches</h5>
-      <DubaiLocations locationList={beachList} />
+      <DubaiLocations
+        locationList={beachList}
+        getSelected={(locations) => setSelectedLocations(locations)}
+      />
     </div>
   );
 }

@@ -1,11 +1,12 @@
-.tripDetails__container {
+.newTripDetails__container {
   background: #ffffff;
+  height: 70vh;
   border: 1px solid rgba(89, 105, 255, 0.24);
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 30px;
 }
-.tripDetails__dateInput > input {
+.newTripDetails__dateInput > input {
   border: none;
   outline: none;
   background-color: transparent;
@@ -13,7 +14,7 @@
   width: 100px;
   cursor: none;
 }
-.tripDetails__dateInput {
+.newTripDetails__dateInput {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 999px;
   width: fit-content;
@@ -25,76 +26,58 @@
   box-shadow: 1px 1px 2px 2px rgba(65, 47, 47, 0.12);
   margin-top: 30px;
 }
-.tripDetails__dateInput,
-.tripDetails__dateInput > input:hover {
+.newTripDetails__dateInput,
+.newTripDetails__dateInput > input:hover {
   cursor: pointer;
 }
-.tripDetails__container > h5 {
+.newTripDetails__container > h5 {
   margin-top: 20px;
-  margin-bottom: 30px;
   margin-left: 10px;
 }
-.tripDetails__locationList {
+.newTripDetails__locationList {
   display: flex;
   flex-direction: column;
 }
-.tripDetails__locationList > div {
+.newTripDetails__locationList > div {
   display: flex;
   justify-content: space-between;
   width: 200px;
 }
-.tripDetails__vertical {
+.newTripDetails__vertical {
   height: 52px;
   width: 1px !important;
   border: 1px solid #000000;
   margin-left: 11px;
 }
-.tripDetails__locationList__joinPoint {
+.newTripDetails__locationList__joinPoint {
   padding-left: 3px;
   margin-top: 3px;
   font-size: 20px !important;
 }
-.tripDetails__locationList__addLocations {
+.newTripDetails__locationList__addLocations,
+.newTripDetails_inviteFriends {
   display: flex;
   justify-content: flex-start !important;
   align-items: center;
   font-weight: 500;
   font-size: 14px;
-  margin-top: 10px;
+  margin-left: 10px;
 }
-.tripDetails__locationList__addLocations:hover {
+.newTripDetails__locationList__addLocations:hover,
+.newTripDetails_inviteFriends:hover {
   cursor: pointer;
   text-decoration: underline;
   color: #0645ad;
 }
-.tripDetails__locationList__addLocations > p {
+.newTripDetails__locationList__addLocations > p,
+.newTripDetails_inviteFriends > p {
   margin: 0;
 }
-.tripDetails__friends {
+.newTripDetails__friends {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
-.tripDetails__friends > h5 {
+.newTripDetails__friends > h5 {
   margin-top: 20px;
-  margin-bottom: 30px;
   margin-left: 10px;
-}
-.card__userImgs {
-  display: flex;
-}
-.tripDetails__friends > .card__userImgs {
-  margin-top: 0px;
-  margin-left: 10px;
-}
-.tripDetails__friends > .card__userImgs > .userImg,
-.tripDetails__friends > .card__userImgs > .userImg1 {
-  height: 35px;
-}
-
-.tripDetails__friends > .card__userImgs > .userImg1 {
-  margin-left: -17px;
-}
-
-.addUserImg {
-  margin-left: -10px;
-  height: 45px;
 }

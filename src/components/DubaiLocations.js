@@ -4,17 +4,23 @@ import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import React, { useState } from "react";
 import "./DubaiLocations.css";
 
-function DubaiLocations({ locationList }) {
-  const [locations, setLoctionList] = useState(locationList);
+function DubaiLocations({ locationList, getSelected }) {
+  const [locations, setLocationList] = useState(locationList);
+  const [selectedLocations, setSelectedLocations] = useState("");
+
   const updateLocationState = (id) => {
     let newLocations = [...locations];
+    let selectedLocationList = [...selectedLocations];
     newLocations.map((location, i) => {
       if (location.id === id) {
         newLocations[i].state = !newLocations[i].state;
+        selectedLocationList[i] = location;
       }
-      setLoctionList(newLocations);
+      setLocationList(newLocations);
+      setSelectedLocations(selectedLocationList);
       return 0;
     });
+    getSelected(selectedLocations);
   };
 
   const locationsList = locations.map((location) => {
