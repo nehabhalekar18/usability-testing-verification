@@ -8,7 +8,6 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import "./NewTripCard.css";
 
 function NewTripCard({ locationList }) {
-  console.log("LocationList::", locationList);
   const locationImg = locationList[1].img;
   return (
     <div className="card row newTripCard ">

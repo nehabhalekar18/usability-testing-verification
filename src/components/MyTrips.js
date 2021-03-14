@@ -5,9 +5,10 @@ import "./MyTrips.css";
 import NewTripDetails from "./NewTripDetails";
 import TripCardList from "./TripCardList";
 import TripDetails from "./TripDetails";
+import tripCardList from "../constants/tripCardListData";
+import completedTrips from "../constants/completedTrips";
 
 function MyTrips(props) {
-  console.log(props.location.state.action);
   const [action] = useState(props.location.state.action);
   function setUpcoming() {
     setIsUpcoming(true);
@@ -27,6 +28,46 @@ function MyTrips(props) {
 
   const [isUpcoming, setIsUpcoming] = useState(true);
 
+  //Dynamic search
+  const [upcomingState, setUpcomingState] = useState({
+    tripCardList,
+    searchTerm: "",
+  });
+  const [CompletedState, setCompletedState] = useState({
+    completedTrips,
+    searchTerm: "",
+  });
+
+  const editSearchTerm = (e) => {
+    if (isUpcoming) {
+      setUpcomingState({
+        tripCardList: tripCardList,
+        searchTerm: e.target.value,
+      });
+    } else {
+      setCompletedState({
+        completedTrips: completedTrips,
+        searchTerm: e.target.value,
+      });
+    }
+  };
+
+  const dynamicSearch = () => {
+    if (isUpcoming) {
+      return upcomingState.tripCardList.filter((location) =>
+        location.tripName
+          .toLowerCase()
+          .includes(upcomingState.searchTerm.toLowerCase())
+      );
+    } else {
+      return CompletedState.completedTrips.filter((location) =>
+        location.tripName
+          .toLowerCase()
+          .includes(CompletedState.searchTerm.toLowerCase())
+      );
+    }
+  };
+
   return (
     <div className="myTrips">
       <div className="row mainContainer">
@@ -37,6 +78,7 @@ function MyTrips(props) {
                 className="search__input"
                 placeholder="Search Trip"
                 type="text"
+                onChange={editSearchTerm}
               />
               <SearchIcon className="searchIcon" />
             </div>
@@ -74,6 +116,7 @@ function MyTrips(props) {
                 isUpcoming={isUpcoming}
                 action={props.location.state.action}
                 locationList={props.location.state.locationList}
+                locations={dynamicSearch()}
               />
             </div>
           </div>
