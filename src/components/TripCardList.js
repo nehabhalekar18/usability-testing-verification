@@ -15,10 +15,10 @@ import FileCopyIcon from "@material-ui/icons/FileCopy";
 import EmailIcon from "@material-ui/icons/Email";
 import NewTripCard from "./NewTripCard";
 
-function TripCardList({ isUpcoming, action, locationList }) {
+function TripCardList({ isUpcoming, action, locationList, locations }) {
   const tripCardsList =
     isUpcoming === true ? (
-      tripCardList.map((trip) => {
+      locations.map((trip) => {
         return (
           <div className="card row tripCard" key={trip.id}>
             <div className="col-sm-4 tripCard__cardImg">
@@ -90,7 +90,7 @@ function TripCardList({ isUpcoming, action, locationList }) {
         );
       })
     ) : (
-      <CompletedTripCards />
+      <CompletedTripCards locations={locations} />
     );
   return (
     <div>

@@ -9,8 +9,8 @@ import user3 from "../assets/user3.png";
 import completedTrips from "../constants/completedTrips";
 import "./CompletedTripCards.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-function CompletedTripCards() {
-  const allTrips = completedTrips.map((trip) => {
+function CompletedTripCards({ locations }) {
+  const allTrips = locations.map((trip) => {
     return (
       <div className="card row tripCardList">
         <div className="col-sm-4 card__imgDiv">
