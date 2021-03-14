@@ -9,8 +9,8 @@ function Footer() {
   return (
     <div className="footer">
       <h6>
-        <CopyrightIcon fontSize="small" />
-        Team 1 • Usability Testing and Verification
+        <CopyrightIcon fontSize="small" /> Team 1 • Usability Testing and
+        Verification
       </h6>
       <div className="footer__socialMedia">
         <FacebookIcon />

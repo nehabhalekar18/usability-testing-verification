@@ -1,4 +1,4 @@
-/* .explore {
+.explore {
   margin: 40px;
   position: relative;
   background-color: #fafafb;
@@ -23,4 +23,4 @@
 }
 .explore__loadMore__btn:hover {
   transform: scale(1.02);
-} */
+}
