@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StoryImg2 from "../assets/sufouh-beach-img.jpg";
 import StoryImg4 from "../assets/storybook-img-4.png";
 import StoryImg1 from "../assets/dubai-banner-img.jpg";
@@ -21,13 +22,25 @@ import StoryImg19 from "../assets/storybook-img-19.png";
 import StoryImg20 from "../assets/storybook-img-20.png";
 import StoryImg21 from "../assets/la-mer-img.jpg";
 import StoryImg22 from "../assets/london-img.jpg";
-import "./StoryBook.css";
+import "./Gallery.css";
 
-function StoryBook() {
+function Gallery({ setSelectedImage }) {
+  const imgHandler = (e) => {
+    console.log(e.target.style);
+    console.log("image clicked", e);
+  };
   return (
     <div className="storyBook">
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg1} />
+        <Link to="/gallery/photo">
+          <img
+            className="storyBook__img1"
+            src={StoryImg1}
+            onClick={(e) => {
+              setSelectedImage(StoryImg1);
+            }}
+          />
+        </Link>
         <img src={StoryImg2} />
         <img src={StoryImg3} />
         <img src={StoryImg4} />
@@ -61,4 +74,4 @@ function StoryBook() {
   );
 }
 
-export default StoryBook;
+export default Gallery;

@@ -11,6 +11,7 @@
   padding-left: 20px;
   background-color: #ffffff;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
 }
 .header > h1 {
   object-fit: contain;
@@ -63,4 +64,8 @@
   max-width: inherit;
   min-width: 40px;
   border-radius: 999px;
+}
+a {
+  text-decoration: none;
+  color: black;
 }

@@ -3,6 +3,7 @@ import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header({ signedIn }) {
   let history = useHistory();
@@ -20,7 +21,9 @@ function Header({ signedIn }) {
       <div className="header__nav">
         <h6>Explore</h6>
         <h6>My Trips</h6>
-        <h6>Storybooks</h6>
+        <h6>
+          <Link to="/gallery">Gallery</Link>
+        </h6>
       </div>
       <div className="header__right">
         <img src={UserImg} alt="" className="header__user" />
