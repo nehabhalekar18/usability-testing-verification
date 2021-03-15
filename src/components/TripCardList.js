@@ -13,79 +13,73 @@ import ShareIcon from "@material-ui/icons/Share";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import EmailIcon from "@material-ui/icons/Email";
+import NewTripCard from "./NewTripCard";
 
-function TripCardList({ isUpcoming }) {
+function TripCardList({ isUpcoming, action, locationList, locations }) {
   const tripCardsList =
     isUpcoming === true ? (
-      tripCardList.map((trip) => {
+      locations.map((trip) => {
         return (
-          <div className="card row tripCardList">
-            <div className="col-sm-4 card__imgDiv">
-              <img src={trip.img} className="card_img" alt="" />
+          <div className="card row tripCard" key={trip.id}>
+            <div className="col-sm-4 tripCard__cardImg">
+              <img src={trip.img} alt="" />
             </div>
-            <div className="col-sm-7 card__details ">
-              <p className="card__tripName">{trip.tripName}</p>
+            <div className="col-sm-7 tripCard__details ">
+              <p>{trip.tripName}</p>
               <p>{trip.tripDate}</p>
-              <div className="card__userImgs">
-                <div>
-                  <img className="userImg" src={user1} alt="" />
-                </div>
-                <div>
-                  <img className="userImg1" src={user3} alt="" />
-                </div>
-                <div>
-                  {" "}
-                  <img className="userImg1" src={user2} alt="" />
-                </div>
-                <div class="dropdown">
-                  <img
-                    class="addUserImg dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    src={addFriends}
-                    alt=""
-                  />
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton1">
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        <EmailIcon />
-                        &nbsp;&nbsp;&nbsp;&nbsp; Invite via E-mail
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        <FileCopyIcon />
-                        &nbsp;&nbsp;&nbsp;&nbsp; Copy link
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div className="tripCard__userImgs">
+                <img className="tripCard__userImg" src={user1} alt="" />
+                <img className="tripCard__userImg1" src={user3} alt="" />
+                <img className="tripCard__userImg1" src={user2} alt="" />
+                <img
+                  className="tripCard__userImg1 tripCard__addFriends_icon dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  src={addFriends}
+                  alt=""
+                />
+                <ul
+                  className="tripCard__addFriends_options dropdown-menu"
+                  aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      <EmailIcon />
+                      &nbsp;&nbsp;&nbsp;&nbsp; Invite via E-mail
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      <FileCopyIcon />
+                      &nbsp;&nbsp;&nbsp;&nbsp; Copy link
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="col-sm-1 card__icon dropdown">
+            <div className="col-sm-1 tripCard__options">
               <MoreVertIcon
-                class="dropdown-toggle"
+                className="dropdown-toggle"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
               />{" "}
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1">
                 <li>
-                  <a class="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/">
                     <ShareIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Share
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/">
                     <EditIcon />
                     &nbsp;&nbsp;&nbsp;&nbsp; Edit
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/">
                     <DeleteIcon />
                     &nbsp;&nbsp;&nbsp;&nbsp; Delete
                   </a>
@@ -96,11 +90,16 @@ function TripCardList({ isUpcoming }) {
         );
       })
     ) : (
-      <CompletedTripCards />
+      <CompletedTripCards locations={locations} />
     );
   return (
     <div>
-      <div>{tripCardsList}</div>
+      <div>
+        {action === "createTrip" ? (
+          <NewTripCard locationList={locationList} />
+        ) : null}
+        {tripCardsList}
+      </div>
     </div>
   );
 }

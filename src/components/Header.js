@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-function Header({ signedIn }) {
+function Header({ signedIn, pathName }) {
   let history = useHistory();
 
   const goToLogin = (login) => {
     history.push({
       pathname: "/login",
-      state: { detail: login },
+      state: { isLogin: login },
     });
   };
 
   return signedIn === true ? (
-    <div className="header">
-      <img src={LogoImg} alt="" className="header__logo" />
+    <div className={pathName === "/login" ? "tranparentHeader" : "header"}>
+      <Link to="/">
+        <img src={LogoImg} alt="" className="header__logo" />
+      </Link>
       <div className="header__nav">
         <h6>Explore</h6>
         <h6>My Trips</h6>
@@ -30,10 +32,14 @@ function Header({ signedIn }) {
       </div>
     </div>
   ) : (
-    <div className="header">
-      <img src={LogoImg} alt="" className="header__logo" />
+    <div className={pathName === "/login" ? "tranparentHeader" : "header"}>
+      <Link to="/">
+        <img src={LogoImg} alt="" className="header__logo" />
+      </Link>
       <div className="header__nav">
-        <h6>Explore</h6>
+        <Link to="/">
+          <h6>Explore</h6>
+        </Link>
       </div>
       <div className="header__right__buttons">
         <button

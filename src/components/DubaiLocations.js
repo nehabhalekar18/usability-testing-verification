@@ -1,10 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
+import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+import React, { useState } from "react";
 import "./DubaiLocations.css";
 
-function DubaiLocations({ locationList }) {
+function DubaiLocations({ locationList, getSelected }) {
+  const [locations, setLocationList] = useState(locationList);
+  const [selectedLocations, setSelectedLocations] = useState("");
+
+  const updateLocationState = (id) => {
+    let newLocations = [...locations];
+    let selectedLocationList = [...selectedLocations];
+    newLocations.map((location, i) => {
+      if (location.id === id) {
+        newLocations[i].state = !newLocations[i].state;
+        selectedLocationList[i] = location;
+      }
+      setLocationList(newLocations);
+      setSelectedLocations(selectedLocationList);
+      return 0;
+    });
+    getSelected(selectedLocations);
+  };
+
+  //replace locationList with locations
   const locationsList = locationList.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
@@ -14,10 +33,22 @@ function DubaiLocations({ locationList }) {
           </div>
           <div className="dubaiLocation__data">
             <div className="dubaiLocation__data__contents">
-              <h4>{location.name}</h4>
-              <Link to="/login">
-                <AddCircleOutlineIcon />
-              </Link>
+              <h6>{location.name}</h6>
+              {location.state === true ? (
+                <CheckCircleOutlineIcon
+                  className="dubaiLocation__data__contents__icon"
+                  onClick={() => {
+                    updateLocationState(location.id);
+                  }}
+                />
+              ) : (
+                <AddCircleOutlineIcon
+                  className="dubaiLocation__data__contents__icon"
+                  onClick={() => {
+                    updateLocationState(location.id);
+                  }}
+                />
+              )}
             </div>
             <div className="dubaiLocation__description">
               <LocationOnOutlinedIcon />

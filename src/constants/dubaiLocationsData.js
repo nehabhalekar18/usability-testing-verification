@@ -1,14 +1,12 @@
-import SufouhBeach from "../assets/sufouh-beach-img.jpg";
-import BurjKhalifa from "../assets/burj-khalifa-img.jpg";
-import DubaiMall from "../assets/dubai-mall-img.jpg";
-import DubaiFountain from "../assets/dubai-fountain-img.jpg";
-import CoveBeachCasear from "../assets/cove-casear-beach-img.jpg";
-import LaMer from "../assets/la-mer-img.jpg";
-import DubaiImg from "../assets/dubai-img.jpg";
-import FranceImg from "../assets/france-img.jpg";
-import GermanyImg from "../assets/germany-img.jpg";
 import AustraliaImg from "../assets/australia-img.jpg";
+import BurjKhalifa from "../assets/burj-khalifa-img.jpg";
+import CoveBeachCasear from "../assets/cove-casear-beach-img.jpg";
+import DubaiFountain from "../assets/dubai-fountain-img.jpg";
+import DubaiMall from "../assets/dubai-mall-img.jpg";
+import GermanyImg from "../assets/germany-img.jpg";
+import LaMer from "../assets/la-mer-img.jpg";
 import NewZealandImg from "../assets/newZealand-img.jpg";
+import SufouhBeach from "../assets/sufouh-beach-img.jpg";
 const dubaiLocations = [
   {
     id: 1,
@@ -17,6 +15,7 @@ const dubaiLocations = [
     description:
       "160-story skyscraper & observation deck,  skyscraper in Dubai. ",
     img: BurjKhalifa,
+    state: false,
   },
   {
     id: 2,
@@ -25,6 +24,7 @@ const dubaiLocations = [
     description:
       "26th-largest shopping mall in the world by gross leasable area, tying with West Edmonton Mall.",
     img: DubaiMall,
+    state: false,
   },
   {
     id: 3,
@@ -33,6 +33,7 @@ const dubaiLocations = [
     description:
       "Huge, choreographed fountain complex.  Located on the 12 hectare manmade Burj Khalifa Lake",
     img: DubaiFountain,
+    state: false,
   },
 
   {
@@ -42,6 +43,7 @@ const dubaiLocations = [
     description:
       "160-story skyscraper & observation deck,  skyscraper in Dubai. ",
     img: BurjKhalifa,
+    state: false,
   },
   {
     id: 5,
@@ -50,6 +52,7 @@ const dubaiLocations = [
     description:
       "Tranquil white sandy & palm lined beach, Soak up the scene at a trendy beach club",
     img: SufouhBeach,
+    state: false,
   },
   {
     id: 6,
@@ -58,6 +61,7 @@ const dubaiLocations = [
     description:
       "high-end dining and an energetic party scene. You can lounge by the pool and have lobster.",
     img: CoveBeachCasear,
+    state: false,
   },
   {
     id: 8,
@@ -66,6 +70,7 @@ const dubaiLocations = [
     description:
       "Perfect summer beach spot if u wanna avoid the hotel ± beach access concept!",
     img: LaMer,
+    state: false,
   },
   {
     id: 9,
@@ -74,6 +79,7 @@ const dubaiLocations = [
     description:
       "Tranquil white sandy & palm lined beach, Soak up the scene at a trendy beach club",
     img: SufouhBeach,
+    state: false,
   },
 
   {
@@ -83,6 +89,7 @@ const dubaiLocations = [
     description:
       "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
     img: GermanyImg,
+    state: false,
   },
   {
     id: 11,
@@ -91,6 +98,7 @@ const dubaiLocations = [
     description:
       "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
     img: NewZealandImg,
+    state: false,
   },
   {
     id: 12,
@@ -99,6 +107,7 @@ const dubaiLocations = [
     description:
       "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
     img: AustraliaImg,
+    state: false,
   },
 ];
 export default dubaiLocations;
