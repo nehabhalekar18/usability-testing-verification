@@ -9,8 +9,20 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  background: #fafafb;
+}
+.tranparentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background: transparent;
 }
 .header > h1 {
   object-fit: contain;

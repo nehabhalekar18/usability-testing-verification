@@ -9,8 +9,8 @@ import user3 from "../assets/user3.png";
 import completedTrips from "../constants/completedTrips";
 import "./CompletedTripCards.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-function CompletedTripCards() {
-  const allTrips = completedTrips.map((trip) => {
+function CompletedTripCards({ locations }) {
+  const allTrips = locations.map((trip) => {
     return (
       <div className="card row tripCardList">
         <div className="col-sm-4 card__imgDiv">
@@ -25,9 +25,9 @@ function CompletedTripCards() {
               src={user1}
               alt=""
               data-tip="hello world"
-            />{" "}
-            <img className="userImg1" src={user3} alt="" />{" "}
-            <img className="userImg1" src={user2} alt="" />{" "}
+            />
+            <img className="userImg1" src={user3} alt="" />
+            <img className="userImg1" src={user2} alt="" />
           </div>
         </div>
         <div className="col-sm-1 card__icon dropdown">
@@ -36,7 +36,7 @@ function CompletedTripCards() {
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
-          />{" "}
+          />
           <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
             <li>
               <a class="dropdown-item" href="/">

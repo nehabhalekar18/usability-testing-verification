@@ -1,13 +1,15 @@
 import SearchIcon from "@material-ui/icons/Search";
 import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import React, { useState } from "react";
-import Journal from "./Journal";
 import "./MyTrips.css";
+import NewTripDetails from "./NewTripDetails";
 import TripCardList from "./TripCardList";
 import TripDetails from "./TripDetails";
-import TripDetailsNav from "./TripDetailsNav";
+import tripCardList from "../constants/tripCardListData";
+import completedTrips from "../constants/completedTrips";
 
-function MyTrips() {
+function MyTrips(props) {
+  const [action] = useState(props.location.state.action);
   function setUpcoming() {
     setIsUpcoming(true);
     var upcoming = document.getElementById("upcomingId");
@@ -25,13 +27,47 @@ function MyTrips() {
   }
 
   const [isUpcoming, setIsUpcoming] = useState(true);
-  const [showTripDetails, setShowTripDetails] = useState(true);
-  const [showJournal, setShowJournal] = useState(false);
 
-  const showTab = (showTripDetails, showJournal) => {
-    setShowJournal(showJournal);
-    setShowTripDetails(showTripDetails);
+  //Dynamic search
+  const [upcomingState, setUpcomingState] = useState({
+    tripCardList,
+    searchTerm: "",
+  });
+  const [CompletedState, setCompletedState] = useState({
+    completedTrips,
+    searchTerm: "",
+  });
+
+  const editSearchTerm = (e) => {
+    if (isUpcoming) {
+      setUpcomingState({
+        tripCardList: tripCardList,
+        searchTerm: e.target.value,
+      });
+    } else {
+      setCompletedState({
+        completedTrips: completedTrips,
+        searchTerm: e.target.value,
+      });
+    }
   };
+
+  const dynamicSearch = () => {
+    if (isUpcoming) {
+      return upcomingState.tripCardList.filter((location) =>
+        location.tripName
+          .toLowerCase()
+          .includes(upcomingState.searchTerm.toLowerCase())
+      );
+    } else {
+      return CompletedState.completedTrips.filter((location) =>
+        location.tripName
+          .toLowerCase()
+          .includes(CompletedState.searchTerm.toLowerCase())
+      );
+    }
+  };
+
   return (
     <div className="myTrips">
       <div className="row mainContainer">
@@ -42,6 +78,7 @@ function MyTrips() {
                 className="search__input"
                 placeholder="Search Trip"
                 type="text"
+                onChange={editSearchTerm}
               />
               <SearchIcon className="searchIcon" />
             </div>
@@ -69,23 +106,31 @@ function MyTrips() {
                 Completed
               </h6>
             </div>
-            <div className="col-sm-6 trip__create">+ Create Trip</div>
+            <div className="col-sm-6 trip__create">
+              <button> + Create Trip</button>
+            </div>
           </div>
           <div className="row trip__cards">
             <div className="col">
-              <TripCardList isUpcoming={isUpcoming} />
+              <TripCardList
+                isUpcoming={isUpcoming}
+                action={props.location.state.action}
+                locationList={props.location.state.locationList}
+                locations={dynamicSearch()}
+              />
             </div>
           </div>
         </div>
         <div className="col-sm-8 myTrips__details">
-          <div className="myTrips__details__tripName">
+          {action === "createTrip" ? <NewTripDetails /> : <TripDetails />}
+          {/* <div className="myTrips__details__tripName">
             <h4>Dubai Trip bon voyage</h4>
           </div>
           <div className="myTrips__details__container">
             <TripDetailsNav contentDetails={showTab} />
             {showTripDetails === true ? <TripDetails /> : null}
             {showJournal === true ? <Journal /> : null}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -2,18 +2,18 @@ import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Location.css";
-function Location(locations) {
-  let list = locations.locations[0];
-  const locationList = list.map((location) => {
+
+function Location({ locations, isLogin }) {
+  const locationList = locations.map((location) => {
     return (
       <div className="col-sm-3 " key={location.id}>
-        <Link to="/location">
+        <Link to={{ pathname: "/location", state: { isLogin: isLogin } }}>
           <div className="location__card">
             <div className="location__img">
               <img src={location.img} alt="" className="location__img" />
             </div>
             <div className="location__data">
-              <h4>{location.name}</h4>
+              <h6>{location.name}</h6>
               <div className="location__description">
                 <LocationOnOutlinedIcon fontSize="small" />
                 <p>{location.subData}</p>
