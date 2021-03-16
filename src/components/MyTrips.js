@@ -109,20 +109,12 @@ function MyTrips(props) {
               <SearchIcon />
             </div>
             {sortValue === "latest" ? (
-              <div
-                className="search__sort"
-                /*  onClick={() => setSortValue("oldest")} */ onClick={() =>
-                  sortTrips("oldest")
-                }>
+              <div className="search__sort" onClick={() => sortTrips("oldest")}>
                 <h6>Latest</h6>
                 <i className="bi bi-sort-down search__sortLatest"></i>
               </div>
             ) : (
-              <div
-                className="search__sort"
-                /* onClick={() => setSortValue("latest")}  */ onClick={() =>
-                  sortTrips("latest")
-                }>
+              <div className="search__sort" onClick={() => sortTrips("latest")}>
                 <h6>Oldest</h6>
                 <i className="bi bi-sort-up-alt search__sortOldest"></i>
               </div>
@@ -164,7 +156,11 @@ function MyTrips(props) {
           </div>
         </div>
         <div className="col-sm-8 myTrips__details">
-          {action === "createTrip" ? <NewTripDetails /> : <TripDetails />}
+          {action === "createTrip" ? (
+            <NewTripDetails props={props} />
+          ) : (
+            <TripDetails props={props} />
+          )}
           {/* <div className="myTrips__details__tripName">
             <h4>Dubai Trip bon voyage</h4>
           </div>
