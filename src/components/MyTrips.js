@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import completedTrips from "../constants/completedTrips";
 import tripCardList from "../constants/tripCardListData";
 import "./MyTrips.css";
-import NewTripDetails from "./NewTripDetails";
 import TripCardList from "./TripCardList";
 import TripDetails from "./TripDetails";
 
 function MyTrips(props) {
   const [action] = useState(props.location.state.action);
+  const [newTripName, setNewTripName] = useState("Untitled Trip");
   const [sortValue, setSortValue] = useState("latest");
+  const [selectedTrip, setSelectedTrip] = useState(0);
 
   function setUpcoming() {
     setIsUpcoming(true);
@@ -17,6 +18,11 @@ function MyTrips(props) {
     var completed = document.getElementById("completedId");
     upcoming.classList.add("upcomingH--active");
     completed.classList.remove("upcomingH--active");
+    if (action === "createTrip") {
+      setSelectedTrip(0);
+    } else {
+      setSelectedTrip(1);
+    }
   }
 
   function setCompleted() {
@@ -25,6 +31,7 @@ function MyTrips(props) {
     var completed = document.getElementById("completedId");
     upcoming.classList.remove("upcomingH--active");
     completed.classList.add("upcomingH--active");
+    setSelectedTrip(5);
   }
 
   const [isUpcoming, setIsUpcoming] = useState(true);
@@ -95,6 +102,7 @@ function MyTrips(props) {
     }
     setSortValue(sortBy);
   };
+
   return (
     <div className="myTrips">
       <div className="row mainContainer">
@@ -147,28 +155,25 @@ function MyTrips(props) {
           <div className="row trip__cards">
             <div className="col">
               <TripCardList
+                newTripName={newTripName}
+                setNewTripName={setNewTripName}
                 isUpcoming={isUpcoming}
-                action={props.location.state.action}
+                action={action}
                 locationList={props.location.state.locationList}
                 locations={dynamicSearch()}
+                setSelectedTrip={setSelectedTrip}
               />
             </div>
           </div>
         </div>
         <div className="col-sm-8 myTrips__details">
-          {action === "createTrip" ? (
-            <NewTripDetails props={props} />
-          ) : (
-            <TripDetails props={props} />
-          )}
-          {/* <div className="myTrips__details__tripName">
-            <h4>Dubai Trip bon voyage</h4>
-          </div>
-          <div className="myTrips__details__container">
-            <TripDetailsNav contentDetails={showTab} />
-            {showTripDetails === true ? <TripDetails /> : null}
-            {showJournal === true ? <Journal /> : null}
-          </div> */}
+          <TripDetails
+            props={props}
+            isUpcoming={isUpcoming}
+            newTripName={newTripName}
+            locations={dynamicSearch()}
+            selectedTrip={selectedTrip}
+          />
         </div>
       </div>
     </div>

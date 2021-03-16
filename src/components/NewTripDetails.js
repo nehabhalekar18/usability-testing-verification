@@ -8,8 +8,7 @@ import NewJournal from "./NewJournal";
 import "./NewTripDetails.css";
 import TripDetailsNav from "./TripDetailsNav";
 
-function NewTripDetails({ props }) {
-  console.log(props.location.state.locationList);
+function NewTripDetails({ props, newTripName }) {
   const [showTripDetails, setShowTripDetails] = useState(true);
   const [showJournal, setShowJournal] = useState(false);
   const addLocationList = props.location.state.locationList;
@@ -17,10 +16,10 @@ function NewTripDetails({ props }) {
     setShowJournal(showJournal);
     setShowTripDetails(showTripDetails);
   };
-
+  console.log(addLocationList);
   return (
     <div className="newTripDetails">
-      <h4>Untitled Trip</h4>
+      <h4>{newTripName}</h4>
       <div className="newTripDetails__container">
         <TripDetailsNav contentDetails={showTab} />
         {showJournal === true ? <NewJournal /> : null}
@@ -36,13 +35,13 @@ function NewTripDetails({ props }) {
             <div className="newTripDetails__locationList">
               <div>
                 <LocationOnOutlinedIcon />
-                <h6>{addLocationList[0].name}</h6>
+                <h6>{addLocationList[1].name}</h6>
                 <DeleteOutlinedIcon />
               </div>
               <div className="tripDetails__vertical"></div>
               <div>
                 <LocationOnOutlinedIcon />
-                <h6>{addLocationList[1].name}</h6>
+                <h6>{addLocationList[2].name}</h6>
                 <DeleteOutlinedIcon />
               </div>
               <div className="tripDetails__locationList__addLocations">

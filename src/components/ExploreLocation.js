@@ -26,8 +26,8 @@ function ExploreLocation(props) {
     });
   };
 
-  const dynamicSearch = () => {
-    return state.dubaiLocations.filter((location) =>
+  const dynamicSearch = (data) => {
+    return data.filter((location) =>
       location.name.toLowerCase().includes(state.searchTerm.toLowerCase())
     );
   };
@@ -84,12 +84,22 @@ function ExploreLocation(props) {
       </div>
 
       <DubaiLocations
-        locationList={dynamicSearch()}
+        locationList={dynamicSearch(dubaiLocations.topsights)}
         getSelected={(locations) => setSelectedLocations(locations)}
       />
       <h5>Beaches</h5>
       <DubaiLocations
-        locationList={dynamicSearch()}
+        locationList={dynamicSearch(dubaiLocations.beaches)}
+        getSelected={(locations) => setSelectedLocations(locations)}
+      />
+      <h5>Adventures</h5>
+      <DubaiLocations
+        locationList={dynamicSearch(dubaiLocations.adventure)}
+        getSelected={(locations) => setSelectedLocations(locations)}
+      />
+      <h5>dining and Bar</h5>
+      <DubaiLocations
+        locationList={dynamicSearch(dubaiLocations.bar)}
         getSelected={(locations) => setSelectedLocations(locations)}
       />
     </div>

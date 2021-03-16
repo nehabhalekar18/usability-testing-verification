@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
-import React, { useState } from "react";
 import "./DubaiLocations.css";
 
 function DubaiLocations({ locationList, getSelected }) {

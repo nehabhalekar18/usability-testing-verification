@@ -1,24 +1,35 @@
+import React from "react";
+import CompletedTripCards from "./CompletedTripCards";
+import NewTripCard from "./NewTripCard";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import EmailIcon from "@material-ui/icons/Email";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ShareIcon from "@material-ui/icons/Share";
-import React from "react";
 import addFriends from "../assets/addFriends.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
-import CompletedTripCards from "./CompletedTripCards";
-import NewTripCard from "./NewTripCard";
 import "./TripCardList.css";
 
-function TripCardList({ isUpcoming, action, locationList, locations }) {
+function TripCardList({
+  newTripName,
+  setNewTripName,
+  isUpcoming,
+  action,
+  locationList,
+  locations,
+  setSelectedTrip,
+}) {
   const tripCardsList =
     isUpcoming === true ? (
       locations.map((trip) => {
         return (
-          <div className="card row tripCard" key={trip.id}>
+          <div
+            className="card row tripCard"
+            key={trip.id}
+            onClick={() => setSelectedTrip(trip.id)}>
             <div className="col-sm-4 tripCard__cardImg">
               <img src={trip.img} alt="" />
             </div>
@@ -61,7 +72,7 @@ function TripCardList({ isUpcoming, action, locationList, locations }) {
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
-              />{" "}
+              />
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1">
@@ -88,13 +99,21 @@ function TripCardList({ isUpcoming, action, locationList, locations }) {
         );
       })
     ) : (
-      <CompletedTripCards locations={locations} />
+      <CompletedTripCards
+        locations={locations}
+        setSelectedTrip={setSelectedTrip}
+      />
     );
   return (
     <div>
       <div>
         {isUpcoming === true && action === "createTrip" ? (
-          <NewTripCard locationList={locationList} />
+          <NewTripCard
+            newTripName={newTripName}
+            setNewTripName={setNewTripName}
+            setSelectedTrip={setSelectedTrip}
+            locationList={locationList}
+          />
         ) : null}
         {tripCardsList}
       </div>
