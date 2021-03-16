@@ -35,8 +35,9 @@ function TripDetailsNav({ contentDetails }) {
       {uploadContent ? (
         <div className="tripDetailsNav__right">
           <div className="tripDetailsNav__upload">
-            <h6> Upload</h6>
-            <i class="bi bi-upload"></i>
+            <input type="file" />
+            <h6>Upload</h6>
+            <i className="bi bi-upload"></i>
           </div>
           <select>
             <option>All</option>

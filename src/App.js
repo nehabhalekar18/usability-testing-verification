@@ -22,42 +22,39 @@ function App() {
   }, [props]);
   return (
     <div className="App">
-      <Router>
-        <Header signedIn={login} pathName={pathName} />
-        <Switch>
-          <Route path="/login" exact render={(props) => <Login {...props} />} />
-          <Route path="/" exact render={() => <Explore isLogin={false} />} />
+      <Header signedIn={login} pathName={pathName} />
+      <Switch>
+        <Route path="/login" exact render={(props) => <Login {...props} />} />
+        <Route path="/" exact render={() => <Explore isLogin={false} />} />
 
-          <Route
-            path="/location"
-            exact
-            render={(props) => <ExploreLocation {...props} />}
-          />
-          <Route
-            path="/trips"
-            exact
-            render={(props) => <MyTrips {...props} />}
-          />
+        <Route
+          path="/location"
+          exact
+          render={(props) => <ExploreLocation {...props} />}
+        />
+        <Route path="/trips" exact render={(props) => <MyTrips {...props} />} />
 
-          {/* <Route path="/gallery" exact component={Gallery} /> */}
-          <Route
-            exact
-            path="/gallery"
-            render={(props) => (
-              <Gallery {...props} setSelectedImage={setSelectedImage} />
-            )}
-          />
-          <Route
-            exact
-            path="/gallery/photo"
-            render={(props) => (
-              <Photo {...props} selectedImage={selectedImage} />
-            )}
-          />
-          {/* <Modal selectedImage={selectedImage} /> */}
-        </Switch>
-      </Router>
-
+        {/* <Route path="/gallery" exact component={Gallery} /> */}
+        <Route
+          exact
+          path="/gallery"
+          render={(props) => (
+            <Gallery {...props} setSelectedImage={setSelectedImage} />
+          )}
+        />
+        {/* <Route
+          exact
+          path="/gallery/photo"
+          render={(props) => <Photo {...props} selectedImage={selectedImage} />}
+        /> */}
+        {/* <Modal selectedImage={selectedImage} /> */}
+      </Switch>
+      {selectedImage && (
+        <Photo
+          selectedImage={selectedImage}
+          setSelectedImage={setSelectedImage}
+        />
+      )}
       {/* Create Trip */}
       {/* Storybook */}
       {/* Footer */}

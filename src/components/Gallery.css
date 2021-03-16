@@ -12,7 +12,7 @@
   overflow-x: hidden;
 }
 .storyBook__row > img,
-.storyBook__img1 {
+.storyBook__img {
   height: 184px;
   margin: 0.1%;
   cursor: pointer;
