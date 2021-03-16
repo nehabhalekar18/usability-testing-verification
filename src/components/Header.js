@@ -21,8 +21,12 @@ function Header({ signedIn, pathName }) {
         <img src={LogoImg} alt="" className="header__logo" />
       </Link>
       <div className="header__nav">
-        <h6>Explore</h6>
-        <h6>My Trips</h6>
+        <Link to="/">
+          <h6>Explore</h6>
+        </Link>
+        <Link to="/trips">
+          <h6>My Trips</h6>
+        </Link>
         <h6>
           <Link to="/gallery">Gallery</Link>
         </h6>
