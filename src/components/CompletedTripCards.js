@@ -9,10 +9,13 @@ import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
 import "./CompletedTripCards.css";
 
-function CompletedTripCards({ locations }) {
+function CompletedTripCards({ locations, setSelectedTrip }) {
   const allTrips = locations.map((trip) => {
     return (
-      <div className="card row tripCardList">
+      <div
+        className="card row tripCardList"
+        key={trip.id}
+        onClick={() => setSelectedTrip(trip.id)}>
         <div className="col-sm-4 card__imgDiv">
           <img src={trip.img} className="card_img" alt="" />
         </div>

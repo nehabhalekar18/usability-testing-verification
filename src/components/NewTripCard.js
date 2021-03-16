@@ -7,10 +7,15 @@ import ShareIcon from "@material-ui/icons/Share";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import "./NewTripCard.css";
 
-function NewTripCard({ locationList }) {
+function NewTripCard({
+  newTripName,
+  setNewTripName,
+  setSelectedTrip,
+  locationList,
+}) {
   const locationImg = locationList[1].img;
   return (
-    <div className="card row newTripCard ">
+    <div className="card row newTripCard " onClick={() => setSelectedTrip(0)}>
       <div className="col-sm-4 newTripCard__cardImg">
         <img src={locationImg} alt="" />
       </div>
@@ -18,7 +23,9 @@ function NewTripCard({ locationList }) {
         <input
           type="text"
           placeholder="Enter trip name"
+          defaultValue={newTripName === "Untitled trip" ? "" : null}
           className="newTripCard__nameInput"
+          onChange={(e) => setNewTripName(e.target.value)}
         />
         <div className="newTripCard__dateInput">
           <CalendarTodayIcon />
