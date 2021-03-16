@@ -23,7 +23,9 @@ function Header({ signedIn, pathName }) {
       <div className="header__nav">
         <h6>Explore</h6>
         <h6>My Trips</h6>
-        <h6>Storybooks</h6>
+        <h6>
+          <Link to="/gallery">Gallery</Link>
+        </h6>
       </div>
       <div className="header__right">
         <img src={UserImg} alt="" className="header__user" />
