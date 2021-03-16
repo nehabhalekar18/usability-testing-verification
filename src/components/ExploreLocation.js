@@ -16,8 +16,8 @@ function ExploreLocation(props) {
     searchTerm: "",
   });
 
-  var topSightsList = dubaiLocations.slice(0, 4);
-  var beachList = dubaiLocations.slice(4, 8);
+  /*  var topSightsList = dubaiLocations.slice(0, 4);
+  var beachList = dubaiLocations.slice(4, 8); */
 
   const editSearchTerm = (e) => {
     setState({
