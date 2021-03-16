@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
 import "./Login.css";
 import LoginCard from "./LoginCard";
 import SignUpCard from "./SignUpCard";
 
 function Login(props) {
-  const [action] = useState(props.location.state.action);
   const [signUp, setSignUp] = useState(false);
   return (
     <div className="login">
@@ -23,7 +21,7 @@ function Login(props) {
 
         <div className="col-sm-6 card login__card ">
           {signUp === true ? (
-            <SignUpCard setSignUp={setSignUp} action={action} />
+            <SignUpCard setSignUp={setSignUp} props={props} />
           ) : (
             <LoginCard setSignUp={setSignUp} props={props} />
           )}

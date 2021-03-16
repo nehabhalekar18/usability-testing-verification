@@ -24,51 +24,41 @@ import StoryImg21 from "../assets/la-mer-img.jpg";
 import StoryImg22 from "../assets/london-img.jpg";
 import "./Gallery.css";
 
-function Gallery({ setSelectedImage }) {
-  const imgHandler = (e) => {
-    console.log(e.target.style);
-    console.log("image clicked", e);
-  };
+function Gallery() {
   return (
     <div className="storyBook">
       <div className="storyBook__row">
         <Link to="/gallery/photo">
-          <img
-            className="storyBook__img1"
-            src={StoryImg1}
-            onClick={(e) => {
-              setSelectedImage(StoryImg1);
-            }}
-          />
+          <img className="storyBook__img1" src={StoryImg1} alt="" />
         </Link>
-        <img src={StoryImg2} />
-        <img src={StoryImg3} />
-        <img src={StoryImg4} />
-        <img className="storyBook_imgEnd" src={StoryImg5} />
+        <img src={StoryImg2} alt="" />
+        <img src={StoryImg3} alt="" />
+        <img src={StoryImg4} alt="" />
+        <img className="storyBook_imgEnd" src={StoryImg5} alt="" />
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg6} />
-        <img src={StoryImg7} />
-        <img src={StoryImg8} />
-        <img src={StoryImg9} />
-        <img src={StoryImg10} />
-        <img src={StoryImg11} />
-        <img className="storyBook_imgEnd" src={StoryImg12} />
+        <img className="storyBook_imgStart" src={StoryImg6} alt="" />
+        <img src={StoryImg7} alt="" />
+        <img src={StoryImg8} alt="" />
+        <img src={StoryImg9} alt="" />
+        <img src={StoryImg10} alt="" />
+        <img src={StoryImg11} alt="" />
+        <img className="storyBook_imgEnd" src={StoryImg12} alt="" />
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg13} />
-        <img src={StoryImg14} />
-        <img src={StoryImg15} />
-        <img src={StoryImg16} />
-        <img className="storyBook_imgEnd" src={StoryImg17} />
+        <img className="storyBook_imgStart" src={StoryImg13} alt="" />
+        <img src={StoryImg14} alt="" />
+        <img src={StoryImg15} alt="" />
+        <img src={StoryImg16} alt="" />
+        <img className="storyBook_imgEnd" src={StoryImg17} alt="" />
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg18} />
-        <img src={StoryImg19} />
-        <img src={StoryImg9} />
-        <img src={StoryImg20} />
-        <img src={StoryImg21} />
-        <img className="storyBook_imgEnd" src={StoryImg22} />
+        <img className="storyBook_imgStart" src={StoryImg18} alt="" />
+        <img src={StoryImg19} alt="" />
+        <img src={StoryImg9} alt="" />
+        <img src={StoryImg20} alt="" />
+        <img src={StoryImg21} alt="" />
+        <img className="storyBook_imgEnd" src={StoryImg22} alt="" />
       </div>
     </div>
   );

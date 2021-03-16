@@ -5,7 +5,7 @@ import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
 
-function Header({ signedIn, pathName }) {
+function Header({ signedIn, pathName, props }) {
   let history = useHistory();
 
   const goToLogin = (login) => {
@@ -21,14 +21,14 @@ function Header({ signedIn, pathName }) {
         <img src={LogoImg} alt="" className="header__logo" />
       </Link>
       <div className="header__nav">
-        <Link to="/">
+        <Link to={{ pathname: "/", state: props.state }}>
           <h6>Explore</h6>
         </Link>
-        <Link to="/trips">
+        <Link to={{ pathname: "/trips", state: props.state }}>
           <h6>My Trips</h6>
         </Link>
         <h6>
-          <Link to="/gallery">Gallery</Link>
+          <Link to={{ pathname: "/gallery", state: props.state }}>Gallery</Link>
         </h6>
       </div>
       <div className="header__right">

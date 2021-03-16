@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import "./Login.css";
 
-function SignUpCard({ setSignUp, action }) {
+function SignUpCard({ setSignUp, props }) {
   return (
     <div className="loginCard__info">
       <div className="row login__cardtitle">
@@ -50,7 +50,7 @@ function SignUpCard({ setSignUp, action }) {
               pathname: "/trips",
               state: {
                 isLogin: true,
-                action: action,
+                action: props.location.state.action,
               },
             }}>
             <button type="button" className="btn btn-dark card__loginbtn">
