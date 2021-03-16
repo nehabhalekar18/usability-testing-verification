@@ -93,7 +93,7 @@ function TripCardList({ isUpcoming, action, locationList, locations }) {
   return (
     <div>
       <div>
-        {action === "createTrip" ? (
+        {isUpcoming === true && action === "createTrip" ? (
           <NewTripCard locationList={locationList} />
         ) : null}
         {tripCardsList}

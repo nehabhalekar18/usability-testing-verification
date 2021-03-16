@@ -40,8 +40,12 @@
 }
 .newTripDetails__locationList > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 200px;
+}
+.newTripDetails__locationList > div > h6{
+  margin-left: 20px;
+  width: 150px;
 }
 .newTripDetails__vertical {
   height: 52px;
@@ -61,7 +65,7 @@
   align-items: center;
   font-weight: 500;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 .newTripDetails__locationList__addLocations:hover,
 .newTripDetails_inviteFriends:hover {
@@ -79,5 +83,5 @@
 }
 .newTripDetails__friends > h5 {
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 8px;
 }
