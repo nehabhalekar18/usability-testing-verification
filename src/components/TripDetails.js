@@ -17,7 +17,7 @@ import { Fragment } from "react";
 function TripDetails() {
   const [showTripDetails, setShowTripDetails] = useState(true);
   const [showJournal, setShowJournal] = useState(false);
-
+  const [journalContents, setJournalContents] = useState("");
   const showTab = (showTripDetails, showJournal) => {
     setShowJournal(showJournal);
     setShowTripDetails(showTripDetails);
@@ -26,8 +26,13 @@ function TripDetails() {
     <div className="tripDetails">
       <h4>Dubai Trip bon voyage</h4>
       <div className="tripDetails__container">
-        <TripDetailsNav contentDetails={showTab} />
-        {showJournal === true ? <Journal /> : null}
+        <TripDetailsNav
+          contentDetails={showTab}
+          journalContentsValue={setJournalContents}
+        />
+        {showJournal === true ? (
+          <Journal journalContents={journalContents} />
+        ) : null}
         {showTripDetails === true ? (
           <Fragment>
             <ChatWindow />

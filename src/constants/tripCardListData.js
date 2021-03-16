@@ -5,12 +5,16 @@ const tripCardList = [
     id: 1,
     tripName: "London Trip",
     tripDate: "Mar 11 - 19, 2021",
+    startDate: "Mar 19 2021",
+    endDate: "Mar 19 2021",
     img: LondonImg,
   },
   {
     id: 2,
     tripName: "Dubai",
     tripDate: "Mar 19 - 25, 2021",
+    startDate: "Mar 11 2021",
+    endDate: "Mar 25 2021",
     img: DubaiImg,
   },
 ];

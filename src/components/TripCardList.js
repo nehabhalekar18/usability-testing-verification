@@ -1,19 +1,17 @@
-import React from "react";
-import "./TripCardList.css";
+import DeleteIcon from "@material-ui/icons/Delete";
+import EditIcon from "@material-ui/icons/Edit";
+import EmailIcon from "@material-ui/icons/Email";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ShareIcon from "@material-ui/icons/Share";
+import React from "react";
+import addFriends from "../assets/addFriends.png";
 import user1 from "../assets/user1.png";
 import user2 from "../assets/user2.png";
 import user3 from "../assets/user3.png";
-import addFriends from "../assets/addFriends.png";
-import tripCardList from "../constants/tripCardListData";
 import CompletedTripCards from "./CompletedTripCards";
-import EditIcon from "@material-ui/icons/Edit";
-
-import ShareIcon from "@material-ui/icons/Share";
-import DeleteIcon from "@material-ui/icons/Delete";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import EmailIcon from "@material-ui/icons/Email";
 import NewTripCard from "./NewTripCard";
+import "./TripCardList.css";
 
 function TripCardList({ isUpcoming, action, locationList, locations }) {
   const tripCardsList =

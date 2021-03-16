@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./TripDetailsNav.css";
 
-function TripDetailsNav({ contentDetails }) {
+function TripDetailsNav({ contentDetails, journalContentsValue }) {
   const [uploadContent, setUploadContent] = useState(false);
   function journalContents() {
     setUploadContent(true);
@@ -36,12 +36,14 @@ function TripDetailsNav({ contentDetails }) {
         <div className="tripDetailsNav__right">
           <div className="tripDetailsNav__upload">
             <h6> Upload</h6>
-            <i class="bi bi-upload"></i>
+            <i className="bi bi-upload"></i>
           </div>
-          <select>
-            <option>All</option>
-            <option>Photos</option>
-            <option>Blogs</option>
+          <select
+            defaultValue="all"
+            onChange={(e) => journalContentsValue(e.target.value)}>
+            <option value="all">All</option>
+            <option value="photos">Photos</option>
+            <option value="blogs">Blogs</option>
           </select>
         </div>
       ) : null}
