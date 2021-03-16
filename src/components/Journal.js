@@ -5,8 +5,6 @@ import journalData from "../constants/journalData";
 import "./Journal.css";
 
 function Journal({ journalContents }) {
-  console.log(journalContents);
-  console.log(journalData.marinaBeach);
   const marinaBeachList = journalData.marinaBeach;
   const palmIslandList = journalData.palmBeach;
   const marinaBeach = marinaBeachList.map((data) => {

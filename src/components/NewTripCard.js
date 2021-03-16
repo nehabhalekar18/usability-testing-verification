@@ -13,7 +13,7 @@ function NewTripCard({
   setSelectedTrip,
   locationList,
 }) {
-  const locationImg = locationList[1].img;
+  const locationImg = locationList[0].img;
   return (
     <div className="card row newTripCard " onClick={() => setSelectedTrip(0)}>
       <div className="col-sm-4 newTripCard__cardImg">

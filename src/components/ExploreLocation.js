@@ -85,22 +85,30 @@ function ExploreLocation(props) {
 
       <DubaiLocations
         locationList={dynamicSearch(dubaiLocations.topsights)}
-        getSelected={(locations) => setSelectedLocations(locations)}
+        getSelected={(locations) =>
+          setSelectedLocations([...selectedLocations, locations])
+        }
       />
       <h5>Beaches</h5>
       <DubaiLocations
         locationList={dynamicSearch(dubaiLocations.beaches)}
-        getSelected={(locations) => setSelectedLocations(locations)}
+        getSelected={(locations) =>
+          setSelectedLocations([...selectedLocations, locations])
+        }
       />
       <h5>Adventures</h5>
       <DubaiLocations
         locationList={dynamicSearch(dubaiLocations.adventure)}
-        getSelected={(locations) => setSelectedLocations(locations)}
+        getSelected={(locations) =>
+          setSelectedLocations([...selectedLocations, locations])
+        }
       />
       <h5>dining and Bar</h5>
       <DubaiLocations
         locationList={dynamicSearch(dubaiLocations.bar)}
-        getSelected={(locations) => setSelectedLocations(locations)}
+        getSelected={(locations) =>
+          setSelectedLocations([...selectedLocations, locations])
+        }
       />
     </div>
   );

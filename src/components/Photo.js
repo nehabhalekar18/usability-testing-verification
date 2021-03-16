@@ -4,7 +4,7 @@ function Photo({ selectedImage }) {
   return (
     <div className="photo">
       <h1>Model</h1>
-      <img src={selectedImage}></img>
+      <img src={selectedImage} alt=""></img>
     </div>
   );
 }

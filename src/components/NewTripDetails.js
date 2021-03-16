@@ -16,7 +16,6 @@ function NewTripDetails({ props, newTripName }) {
     setShowJournal(showJournal);
     setShowTripDetails(showTripDetails);
   };
-  console.log(addLocationList);
   return (
     <div className="newTripDetails">
       <h4>{newTripName}</h4>
@@ -35,13 +34,13 @@ function NewTripDetails({ props, newTripName }) {
             <div className="newTripDetails__locationList">
               <div>
                 <LocationOnOutlinedIcon />
-                <h6>{addLocationList[1].name}</h6>
+                <h6>{addLocationList[0].name}</h6>
                 <DeleteOutlinedIcon />
               </div>
               <div className="tripDetails__vertical"></div>
               <div>
                 <LocationOnOutlinedIcon />
-                <h6>{addLocationList[2].name}</h6>
+                <h6>{addLocationList[1].name}</h6>
                 <DeleteOutlinedIcon />
               </div>
               <div className="tripDetails__locationList__addLocations">

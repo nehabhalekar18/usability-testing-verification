@@ -9,7 +9,6 @@ function Explore({ isLogin }) {
   const [loadMoreBtn, setLoadMoreBtn] = useState(true);
   var items = locationList.slice(0, 8);
   const [locations, setLocations] = useState(items);
-  console.log(locations);
   const [state, setState] = useState({ locationList, searchTerm: "" });
   const loadMore = () => {
     setLocations(locationList);

@@ -22,7 +22,6 @@ function TripDetails({
   locations,
   selectedTrip,
 }) {
-  console.log(locations, selectedTrip);
   const [action] = useState(props.location.state.action);
   const [showTripDetails, setShowTripDetails] = useState(true);
   const [showJournal, setShowJournal] = useState(false);
