@@ -109,7 +109,7 @@ function MyTrips(props) {
       <div className="row mainContainer">
         <div className="col-sm-4 myTrips__leftSection">
           <div className="row">
-            <div className="col-sm-10 search__bar">
+            <div className="col-sm-9 search__bar">
               <input
                 placeholder="Search Trip"
                 type="text"
@@ -117,6 +117,7 @@ function MyTrips(props) {
               />
               <SearchIcon />
             </div>
+            <div className="col-sm-1"></div>
             <div className="col-sm-2">
               {sortValue === "latest" ? (
                 <div

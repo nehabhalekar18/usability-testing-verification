@@ -161,7 +161,7 @@ hr {
 }
 
 .card__emailBox_input {
-  height: 48px;
+  height: 45px;
   border: none;
   outline-color: #fff;
   min-width: 100%;
@@ -183,7 +183,7 @@ hr {
 }
 
 .card__passBox_input {
-  height: 48px;
+  height: 45px;
   border: none;
   outline-color: #fff;
   min-width: 90%;
