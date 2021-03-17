@@ -2,12 +2,13 @@
   
 } */
 
-.storyBook{
-  margin:40px
+.storyBook {
+  margin: 40px;
 }
 .storyBook__row {
-  margin-right: 40px !important;
-  margin-left: 40px !important;
+  display: flex;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
   object-fit: contain;
   max-width: 100%;
   display: flex;
@@ -16,10 +17,15 @@
 }
 .storyBook__row > img,
 .storyBook__img {
-  height: 184px;
-  margin: 0.1%;
+  height: 194px;
+
   cursor: pointer;
 }
+
+.storyBook__img {
+  margin: 1px;
+}
+
 /* .storyBook_imgEnd {
   margin-right: 40px !important;
   position: inherit;
