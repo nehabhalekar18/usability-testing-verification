@@ -1,14 +1,16 @@
+import React, { Fragment, useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
-import React, { Fragment, useState } from "react";
 import ChatWindow from "./ChatWindow";
 import NewJournal from "./NewJournal";
 import "./NewTripDetails.css";
 import TripDetailsNav from "./TripDetailsNav";
 
 function NewTripDetails({ props, newTripName }) {
+  console.log(props.location.state.action);
   const [showTripDetails, setShowTripDetails] = useState(true);
   const [showJournal, setShowJournal] = useState(false);
   const addLocationList = props.location.state.locationList;
@@ -20,7 +22,10 @@ function NewTripDetails({ props, newTripName }) {
     <div className="newTripDetails">
       <h4>{newTripName}</h4>
       <div className="newTripDetails__container">
-        <TripDetailsNav contentDetails={showTab} />
+        <TripDetailsNav
+          contentDetails={showTab}
+          action={props.location.state.action}
+        />
         {showJournal === true ? <NewJournal /> : null}
         {showTripDetails === true ? (
           <Fragment>
@@ -39,8 +44,15 @@ function NewTripDetails({ props, newTripName }) {
               </div>
               <div className="tripDetails__vertical"></div>
               <div>
-                <LocationOnOutlinedIcon />
+                <FiberManualRecordIcon className="tripDetails__locationList__joinPoint" />
                 <h6>{addLocationList[1].name}</h6>
+                <DeleteOutlinedIcon />
+              </div>
+              <div className="tripDetails__vertical1"></div>
+
+              <div>
+                <LocationOnOutlinedIcon />
+                <h6>{addLocationList[2].name}</h6>
                 <DeleteOutlinedIcon />
               </div>
               <div className="tripDetails__locationList__addLocations">

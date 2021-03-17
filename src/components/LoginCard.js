@@ -6,7 +6,6 @@ import google from "../assets/Google.png";
 import "./Login.css";
 
 function LoginCard({ setSignUp, props, setActiveTag }) {
-  console.log(props);
   return (
     <div className="loginCard__info">
       <div className="row login__cardtitle">

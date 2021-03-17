@@ -4,7 +4,6 @@ import LoginCard from "./LoginCard";
 import SignUpCard from "./SignUpCard";
 
 function Login({ setActiveTag, props }) {
-  console.log(props);
   const [signUp, setSignUp] = useState(false);
   return (
     <div className="login">

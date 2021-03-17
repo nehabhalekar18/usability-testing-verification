@@ -1,10 +1,8 @@
-import React, { Link } from "react";
+import React from "react";
 import "./Photo.css";
-import CloseIcon from "@material-ui/icons/Close";
 
 function Photo({ selectedImage, setSelectedImage }) {
   const closeHandler = () => {
-    console.log("closed");
     setSelectedImage(null);
   };
   return (
@@ -13,7 +11,7 @@ function Photo({ selectedImage, setSelectedImage }) {
       onClick={(e) => {
         closeHandler();
       }}>
-      <img src={selectedImage}></img>
+      <img src={selectedImage} alt=""></img>
     </div>
   );
 }
