@@ -28,37 +28,219 @@ function Gallery() {
   return (
     <div className="storyBook">
       <div className="storyBook__row">
-        <Link to="/gallery/photo">
-          <img className="storyBook__img1" src={StoryImg1} alt="" />
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg1}
+            onClick={(e) => {
+              setSelectedImage(StoryImg1);
+            }}
+          />
         </Link>
-        <img src={StoryImg2} alt="" />
-        <img src={StoryImg3} alt="" />
-        <img src={StoryImg4} alt="" />
-        <img className="storyBook_imgEnd" src={StoryImg5} alt="" />
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg2}
+            onClick={(e) => {
+              setSelectedImage(StoryImg2);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg3}
+            onClick={(e) => {
+              setSelectedImage(StoryImg3);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg4}
+            onClick={(e) => {
+              setSelectedImage(StoryImg4);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg5}
+            onClick={(e) => {
+              setSelectedImage(StoryImg5);
+            }}
+          />
+        </Link>
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg6} alt="" />
-        <img src={StoryImg7} alt="" />
-        <img src={StoryImg8} alt="" />
-        <img src={StoryImg9} alt="" />
-        <img src={StoryImg10} alt="" />
-        <img src={StoryImg11} alt="" />
-        <img className="storyBook_imgEnd" src={StoryImg12} alt="" />
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg6}
+            onClick={(e) => {
+              setSelectedImage(StoryImg6);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg7}
+            onClick={(e) => {
+              setSelectedImage(StoryImg7);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg8}
+            onClick={(e) => {
+              setSelectedImage(StoryImg8);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg9}
+            onClick={(e) => {
+              setSelectedImage(StoryImg9);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg10}
+            onClick={(e) => {
+              setSelectedImage(StoryImg10);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg11}
+            onClick={(e) => {
+              setSelectedImage(StoryImg11);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg12}
+            onClick={(e) => {
+              setSelectedImage(StoryImg12);
+            }}
+          />
+        </Link>
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg13} alt="" />
-        <img src={StoryImg14} alt="" />
-        <img src={StoryImg15} alt="" />
-        <img src={StoryImg16} alt="" />
-        <img className="storyBook_imgEnd" src={StoryImg17} alt="" />
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg13}
+            onClick={(e) => {
+              setSelectedImage(StoryImg13);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg14}
+            onClick={(e) => {
+              setSelectedImage(StoryImg14);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg15}
+            onClick={(e) => {
+              setSelectedImage(StoryImg15);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg16}
+            onClick={(e) => {
+              setSelectedImage(StoryImg16);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg17}
+            onClick={(e) => {
+              setSelectedImage(StoryImg17);
+            }}
+          />
+        </Link>
       </div>
       <div className="storyBook__row">
-        <img className="storyBook_imgStart" src={StoryImg18} alt="" />
-        <img src={StoryImg19} alt="" />
-        <img src={StoryImg9} alt="" />
-        <img src={StoryImg20} alt="" />
-        <img src={StoryImg21} alt="" />
-        <img className="storyBook_imgEnd" src={StoryImg22} alt="" />
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg18}
+            onClick={(e) => {
+              setSelectedImage(StoryImg18);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg19}
+            onClick={(e) => {
+              setSelectedImage(StoryImg19);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg9}
+            onClick={(e) => {
+              setSelectedImage(StoryImg9);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg20}
+            onClick={(e) => {
+              setSelectedImage(StoryImg20);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg21}
+            onClick={(e) => {
+              setSelectedImage(StoryImg21);
+            }}
+          />
+        </Link>
+        <Link to="/gallery">
+          <img
+            className="storyBook__img"
+            src={StoryImg22}
+            onClick={(e) => {
+              setSelectedImage(StoryImg22);
+            }}
+          />
+        </Link>
       </div>
     </div>
   );
