@@ -33,27 +33,27 @@ function CompletedTripCards({ locations, setSelectedTrip }) {
             <img className="userImg1" src={user2} alt="" />
           </div>
         </div>
-        <div className="col-sm-1 card__icon dropdown">
+        <div className="col-sm-1 tripCard__options">
           <MoreVertIcon
-            class="dropdown-toggle"
+            className="dropdown-toggle"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
           />
-          <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li>
-              <a class="dropdown-item" href="/">
+              <a className="dropdown-item" href="/">
                 <ShareIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Share
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="/">
+              <a className="dropdown-item" href="/">
                 <EditIcon />
                 &nbsp;&nbsp;&nbsp;&nbsp; Edit
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="/">
+              <a className="dropdown-item" href="/">
                 <DeleteIcon />
                 &nbsp;&nbsp;&nbsp;&nbsp; Delete
               </a>

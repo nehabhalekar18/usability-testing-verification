@@ -4,13 +4,14 @@
   border-radius: 16px;
   justify-content: space-around;
   margin: 0 12px;
+  
 }
 .banner__img {
   height: -webkit-fill-available;
   max-width: inherit;
   min-width: -webkit-fill-available;
   border-radius: 16px;
-  background-size: cover;
+  object-fit: cover;
 }
 .banner__content {
   color: #ffffff;

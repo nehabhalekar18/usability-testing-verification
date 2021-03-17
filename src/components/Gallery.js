@@ -24,7 +24,7 @@ import StoryImg21 from "../assets/la-mer-img.jpg";
 import StoryImg22 from "../assets/london-img.jpg";
 import "./Gallery.css";
 
-function Gallery() {
+function Gallery({ setSelectedImage }) {
   return (
     <div className="storyBook">
       <div className="storyBook__row">
@@ -35,6 +35,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg1);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -44,6 +45,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg2);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -53,6 +55,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg3);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -62,6 +65,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg4);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -71,6 +75,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg5);
             }}
+            alt=""
           />
         </Link>
       </div>
@@ -82,6 +87,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg6);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -91,6 +97,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg7);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -100,6 +107,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg8);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -109,6 +117,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg9);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -118,6 +127,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg10);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -127,6 +137,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg11);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -136,6 +147,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg12);
             }}
+            alt=""
           />
         </Link>
       </div>
@@ -147,6 +159,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg13);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -156,6 +169,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg14);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -165,6 +179,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg15);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -174,6 +189,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg16);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -183,6 +199,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg17);
             }}
+            alt=""
           />
         </Link>
       </div>
@@ -194,6 +211,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg18);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -203,6 +221,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg19);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -212,6 +231,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg9);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -221,6 +241,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg20);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -230,6 +251,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg21);
             }}
+            alt=""
           />
         </Link>
         <Link to="/gallery">
@@ -239,6 +261,7 @@ function Gallery() {
             onClick={(e) => {
               setSelectedImage(StoryImg22);
             }}
+            alt=""
           />
         </Link>
       </div>

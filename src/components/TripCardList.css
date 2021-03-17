@@ -3,9 +3,10 @@
   background: #fffffe;
   border: 1px solid #f0eeee;
   box-sizing: border-box;
-  box-shadow: 4px 4px 4px 2px rgba(139, 138, 138, 0.25);
+  box-shadow: 0px 2px rgba(139, 138, 138, 0.25);
   border-radius: 16px;
   padding: 0px;
+  margin-right: 0px;
   border-bottom: 5px solid lightgray;
   position: inherit;
   justify-content: inherit;
@@ -14,7 +15,6 @@
 
 .tripCard:hover {
   cursor: pointer;
-
   border-bottom: 7px solid #4658fc;
 }
 
@@ -36,12 +36,13 @@
   margin-bottom: auto;
   padding-left: 20px;
 }
-
+.tripCard__details__tripName{
+font-size: 17px;
+  font-weight: 500;
+}
 .tripCard__details > p {
   padding: 0;
   margin: 0%;
-  font-size: 17px;
-  font-weight: 500;
 }
 
 .tripCard__options {

@@ -49,7 +49,7 @@ function TripDetails({
                 ) : null}
                 {showTripDetails === true ? (
                   <Fragment>
-                    <ChatWindow />
+                    <ChatWindow showChatValue={true} />
                     <div className="tripDetails__dateInput">
                       <CalendarTodayIcon />
                       <input type="text" defaultValue="Mar 11 - 19" />
