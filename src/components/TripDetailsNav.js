@@ -35,13 +35,10 @@ function TripDetailsNav({ contentDetails, journalContentsValue }) {
       {uploadContent ? (
         <div className="tripDetailsNav__right">
           <div className="tripDetailsNav__upload">
-            <input type="file" />
             <h6>Upload</h6>
             <i className="bi bi-upload"></i>
           </div>
-          <select
-            defaultValue="all"
-            onChange={(e) => journalContentsValue(e.target.value)}>
+          <select onChange={(e) => journalContentsValue(e.target.value)}>
             <option value="all">All</option>
             <option value="photos">Photos</option>
             <option value="blogs">Blogs</option>

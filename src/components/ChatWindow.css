@@ -10,7 +10,7 @@
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin-left: 30vw;
-  margin-top: -5vh;
+  margin-top: 0vh;
 }
 .chatWindow__nav {
   display: flex;

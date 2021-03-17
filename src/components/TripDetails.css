@@ -44,14 +44,26 @@
   width: 200px;
 }
 .tripDetails__vertical {
-  height: 52px;
+  height: 58px;
   width: 1px !important;
   border: 1px solid #000000;
   margin-left: 11px;
+  margin-top: -6px;
+}
+.tripDetails__vertical1 {
+  height: 60px;
+  width: 1px !important;
+  border: 1px solid #000000;
+  margin-left: 11px;
+  margin-top: -15px;
+}
+
+.marker {
+  margin-top: -2px;
 }
 .tripDetails__locationList__joinPoint {
   padding-left: 3px;
-  margin-top: 3px;
+  margin-top: -4px;
   font-size: 20px !important;
 }
 .tripDetails__locationList__addLocations {
