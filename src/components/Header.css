@@ -24,8 +24,8 @@
   padding-left: 20px;
   background: transparent;
 }
-.header__logo{
-  padding-left:  28px;
+.header__logo {
+  padding-left: 28px;
 }
 .header__nav {
   display: flex;
@@ -39,7 +39,10 @@
   margin-left: -45%;
   margin-top: 0.5%;
 }
-.header__nav__active{
+.header__nav > a {
+  text-align: -webkit-center;
+}
+.header__nav__active {
   border-bottom: 4px solid #5969ff;
   width: 40px;
   text-align: center;

@@ -7,10 +7,14 @@ import Banner from "./Banner";
 import DubaiLocations from "./DubaiLocations";
 import "./ExploreLocation.css";
 
-function ExploreLocation(props) {
+function ExploreLocation({ setActiveTag, props }) {
   const [login, setLogin] = useState(props.location.state.isLogin);
   const [selectedLocations, setSelectedLocations] = useState("");
 
+  function loginState() {
+    setLogin(true);
+    setActiveTag("");
+  }
   const [state, setState] = useState({
     placesToVisit,
     searchTerm: "",
@@ -53,7 +57,7 @@ function ExploreLocation(props) {
             }}>
             <button
               className="exploreLocation__createTrip"
-              onClick={() => setLogin(true)}>
+              onClick={() => loginState()}>
               <AddIcon />
               Create Trip
             </button>
