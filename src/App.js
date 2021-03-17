@@ -20,6 +20,7 @@ function App() {
     setPathName(props.pathname);
     if (login !== undefined) setLogin(login.isLogin);
   }, [props]);
+
   return (
     <div className="App">
       <Header
@@ -41,10 +42,18 @@ function App() {
         <Route
           path="/gallery"
           exact
-          render={(props) => <Gallery {...props} />}
+          render={(props) => (
+            <Gallery {...props} setSelectedImage={setSelectedImage} />
+          )}
         />
+        {selectedImage && (
+          <Photo
+            selectedImage={selectedImage}
+            setSelectedImage={setSelectedImage}
+          />
+        )}
+        <Footer />
       </Switch>
-      <Footer />
     </div>
   );
 }

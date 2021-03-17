@@ -41,7 +41,8 @@
 .tripDetailsNav__upload > i::before {
   font-weight: 900 !important;
 }
-.tripDetailsNav__upload > h6 {
+.tripDetailsNav__upload > h6,
+input {
   margin-top: 3px;
 }
 .tripDetailsNav__right > select {
