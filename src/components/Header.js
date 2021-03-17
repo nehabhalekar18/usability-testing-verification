@@ -22,19 +22,19 @@ function Header({ activeTag, setActiveTag, signedIn, pathName, props }) {
       </Link>
       <div className="header__nav">
         <Link to={{ pathname: "/", state: props.state }}>
-          <h6>Explore</h6>
+          <h6 onClick={() => setActiveTag("explore")}>Explore</h6>
           {activeTag === "explore" ? (
             <div className="header__nav__active"></div>
           ) : null}
         </Link>
         <Link to={{ pathname: "/trips", state: props.state }}>
-          <h6>My Trips</h6>
+          <h6 onClick={() => setActiveTag("trips")}>My Trips</h6>
           {activeTag === "trips" ? (
             <div className="header__nav__active"></div>
           ) : null}
         </Link>
         <Link to={{ pathname: "/gallery", state: props.state }}>
-          <h6>Gallery</h6>
+          <h6 onClick={() => setActiveTag("gallery")}>Gallery</h6>
           {activeTag === "gallery" ? (
             <div className="header__nav__active"></div>
           ) : null}
@@ -51,12 +51,10 @@ function Header({ activeTag, setActiveTag, signedIn, pathName, props }) {
       </Link>
       <div className="header__nav">
         <Link to="/">
-          <h6>
-            Explore
-            {activeTag === "explore" ? (
-              <div className="header__nav__active"></div>
-            ) : null}
-          </h6>
+          <h6>Explore</h6>
+          {activeTag === "explore" ? (
+            <div className="header__nav__active"></div>
+          ) : null}
         </Link>
       </div>
       <div className="header__right__buttons">

@@ -3,7 +3,8 @@ import "./Login.css";
 import LoginCard from "./LoginCard";
 import SignUpCard from "./SignUpCard";
 
-function Login(props) {
+function Login({ setActiveTag, props }) {
+  console.log(props);
   const [signUp, setSignUp] = useState(false);
   return (
     <div className="login">
@@ -23,7 +24,11 @@ function Login(props) {
           {signUp === true ? (
             <SignUpCard setSignUp={setSignUp} props={props} />
           ) : (
-            <LoginCard setSignUp={setSignUp} props={props} />
+            <LoginCard
+              setSignUp={setSignUp}
+              props={props}
+              setActiveTag={setActiveTag}
+            />
           )}
         </div>
       </div>

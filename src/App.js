@@ -33,13 +33,31 @@ function App() {
         props={props}
       />
       <Switch>
-        <Route path="/" exact render={() => <Explore isLogin={false} />} />
+        <Route
+          path="/"
+          exact
+          render={() => <Explore isLogin={false} setActiveTag={setActiveTag} />}
+        />
         <Route
           path="/location"
           exact
-          render={(props) => <ExploreLocation {...props} />}
+          render={(props) => (
+            <ExploreLocation
+              setActiveTag={(activeTag) => setActiveTag(activeTag)}
+              props={props}
+            />
+          )}
         />
-        <Route path="/login" exact render={(props) => <Login {...props} />} />
+        <Route
+          path="/login"
+          exact
+          render={(props) => (
+            <Login
+              setActiveTag={(activeTag) => setActiveTag(activeTag)}
+              props={props}
+            />
+          )}
+        />
         <Route path="/trips" exact render={(props) => <MyTrips {...props} />} />
         <Route
           path="/gallery"

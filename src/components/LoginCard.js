@@ -5,7 +5,7 @@ import fb from "../assets/Facebook-Circled.png";
 import google from "../assets/Google.png";
 import "./Login.css";
 
-function LoginCard({ setSignUp, props }) {
+function LoginCard({ setSignUp, props, setActiveTag }) {
   console.log(props);
   return (
     <div className="loginCard__info">
@@ -72,7 +72,10 @@ function LoginCard({ setSignUp, props }) {
                 action: props.location.state.action,
               },
             }}>
-            <button type="button" className="btn btn-dark card__loginbtn">
+            <button
+              type="button"
+              className="btn btn-dark card__loginbtn"
+              onClick={() => setActiveTag("trips")}>
               Login
             </button>
           </Link>
