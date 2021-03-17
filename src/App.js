@@ -8,9 +8,11 @@ import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import MyTrips from "./components/MyTrips";
+import Photo from "./components/Photo";
 
 function App() {
   const props = useLocation();
+  const [selectedImage, setSelectedImage] = useState(null);
   const [login, setLogin] = useState(false);
   const [pathName, setPathName] = useState();
 
