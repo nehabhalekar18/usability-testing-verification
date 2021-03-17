@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import CompletedTripCards from "./CompletedTripCards";
 import NewTripCard from "./NewTripCard";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -34,7 +34,7 @@ function TripCardList({
               <img src={trip.img} alt="" />
             </div>
             <div className="col-sm-7 tripCard__details ">
-              <p>{trip.tripName}</p>
+              <p className="tripCard__details__tripName">{trip.tripName}</p>
               <p>{trip.tripDate}</p>
               <div className="tripCard__userImgs">
                 <img className="tripCard__userImg" src={user1} alt="" />
@@ -105,19 +105,17 @@ function TripCardList({
       />
     );
   return (
-    <div>
-      <div>
-        {isUpcoming === true && action === "createTrip" ? (
-          <NewTripCard
-            newTripName={newTripName}
-            setNewTripName={setNewTripName}
-            setSelectedTrip={setSelectedTrip}
-            locationList={locationList}
-          />
-        ) : null}
-        {tripCardsList}
-      </div>
-    </div>
+    <Fragment>
+      {isUpcoming === true && action === "createTrip" ? (
+        <NewTripCard
+          newTripName={newTripName}
+          setNewTripName={setNewTripName}
+          setSelectedTrip={setSelectedTrip}
+          locationList={locationList}
+        />
+      ) : null}
+      {tripCardsList}
+    </Fragment>
   );
 }
 

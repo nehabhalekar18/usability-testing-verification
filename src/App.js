@@ -11,6 +11,7 @@ import MyTrips from "./components/MyTrips";
 
 function App() {
   const props = useLocation();
+  const [activeTag, setActiveTag] = useState("explore");
   const [login, setLogin] = useState(false);
   const [pathName, setPathName] = useState();
 
@@ -21,7 +22,13 @@ function App() {
   }, [props]);
   return (
     <div className="App">
-      <Header signedIn={login} path={pathName} props={props} />
+      <Header
+        activeTag={activeTag}
+        setActiveTag={(activeTag) => setActiveTag(activeTag)}
+        signedIn={login}
+        path={pathName}
+        props={props}
+      />
       <Switch>
         <Route path="/" exact render={() => <Explore isLogin={false} />} />
         <Route

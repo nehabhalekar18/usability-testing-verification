@@ -5,11 +5,6 @@
   height: fit-content;
 }
 
-.trip__cards {
-  /* overflow-y: scroll; */
-  /* height: 90vh;
-  scroll-behavior: smooth; */
-}
 /*----------------------------*/
 .search__bar{
   border: 2px solid rgba(39, 35, 67, 0.1);
@@ -20,20 +15,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
-  width: 80%;
 }
 .search__bar>input{
   border: none;
   outline: none;
   background: transparent;
-}
-.search__sort{
-  display: flex;
-  align-items: center;
-  width: 20%;
-  justify-content: space-between;
-  margin-left: 20px;
-  cursor: pointer;
 }
 .search__sort>h6{
   margin:0
@@ -76,6 +62,9 @@
   margin-top: 10px;
   margin-bottom: auto;
   text-align: end;
+  display: flex;
+  width:auto;
+  justify-content: flex-end;
 }
 .search__sort>h6{
   display: flex;
@@ -119,9 +108,13 @@
   border: none;
   border-radius: 16px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 14px;
   padding-top: 6px;
   padding-bottom: 6px;
+  font-weight: 500;
+}
+.trip__create > button:hover{
+  transform:  scale(1.05) ;
 }
 .trip__detailComponent {
   border: 1px solid black;
@@ -151,6 +144,7 @@
 .trip__upcoming > h6,
 .trip__completed > h6 {
   opacity: 0.5;
+  margin:0;
 }
 
 .upcomingH--active {

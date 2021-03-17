@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BannerImg from "../assets/banner-img.jpg";
+import BannerImg from "../assets/banner-img-9.jpg";
 import locationList from "../constants/locationsData";
 import Banner from "./Banner";
 import "./Explore.css";
@@ -9,6 +9,7 @@ function Explore({ isLogin }) {
   const [loadMoreBtn, setLoadMoreBtn] = useState(true);
   var items = locationList.slice(0, 8);
   const [locations, setLocations] = useState(items);
+  console.log(locations);
   const [state, setState] = useState({ locationList, searchTerm: "" });
   const loadMore = () => {
     setLocations(locationList);

@@ -1,7 +1,8 @@
-import SearchIcon from "@material-ui/icons/Search";
 import React, { useState } from "react";
+import SearchIcon from "@material-ui/icons/Search";
 import completedTrips from "../constants/completedTrips";
 import tripCardList from "../constants/tripCardListData";
+import AddIcon from "@material-ui/icons/Add";
 import "./MyTrips.css";
 import TripCardList from "./TripCardList";
 import TripDetails from "./TripDetails";
@@ -107,8 +108,8 @@ function MyTrips(props) {
     <div className="myTrips">
       <div className="row mainContainer">
         <div className="col-sm-4 myTrips__leftSection">
-          <div className="search">
-            <div className="search__bar">
+          <div className="row">
+            <div className="col-sm-10 search__bar">
               <input
                 placeholder="Search Trip"
                 type="text"
@@ -116,17 +117,23 @@ function MyTrips(props) {
               />
               <SearchIcon />
             </div>
-            {sortValue === "latest" ? (
-              <div className="search__sort" onClick={() => sortTrips("oldest")}>
-                <h6>Latest</h6>
-                <i className="bi bi-sort-down search__sortLatest"></i>
-              </div>
-            ) : (
-              <div className="search__sort" onClick={() => sortTrips("latest")}>
-                <h6>Oldest</h6>
-                <i className="bi bi-sort-up-alt search__sortOldest"></i>
-              </div>
-            )}
+            <div className="col-sm-2">
+              {sortValue === "latest" ? (
+                <div
+                  className="search__sort"
+                  onClick={() => sortTrips("oldest")}>
+                  <h6>Latest</h6>
+                  <i className="bi bi-sort-down search__sortLatest"></i>
+                </div>
+              ) : (
+                <div
+                  className="search__sort"
+                  onClick={() => sortTrips("latest")}>
+                  <h6>Oldest</h6>
+                  <i className="bi bi-sort-up-alt search__sortOldest"></i>
+                </div>
+              )}
+            </div>
           </div>
           <div className="row trip__tabs">
             <div className="col-sm-3 trip__upcoming">
@@ -149,7 +156,9 @@ function MyTrips(props) {
               </h6>
             </div>
             <div className="col-sm-6 trip__create">
-              <button> + Create Trip</button>
+              <button>
+                <AddIcon /> Create Trip
+              </button>
             </div>
           </div>
           <div className="row trip__cards">

@@ -5,7 +5,8 @@ import LogoImg from "../assets/logo.png";
 import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
 
-function Header({ signedIn, pathName, props }) {
+function Header({ activeTag, setActiveTag, signedIn, pathName, props }) {
+  console.log(activeTag);
   let history = useHistory();
 
   const goToLogin = (login) => {
@@ -23,13 +24,22 @@ function Header({ signedIn, pathName, props }) {
       <div className="header__nav">
         <Link to={{ pathname: "/", state: props.state }}>
           <h6>Explore</h6>
+          {activeTag === "explore" ? (
+            <div className="header__nav__active"></div>
+          ) : null}
         </Link>
         <Link to={{ pathname: "/trips", state: props.state }}>
           <h6>My Trips</h6>
+          {activeTag === "trips" ? (
+            <div className="header__nav__active"></div>
+          ) : null}
         </Link>
-        <h6>
-          <Link to={{ pathname: "/gallery", state: props.state }}>Gallery</Link>
-        </h6>
+        <Link to={{ pathname: "/gallery", state: props.state }}>
+          <h6>Gallery</h6>
+          {activeTag === "gallery" ? (
+            <div className="header__nav__active"></div>
+          ) : null}
+        </Link>
       </div>
       <div className="header__right">
         <img src={UserImg} alt="" className="header__user" />
@@ -42,7 +52,12 @@ function Header({ signedIn, pathName, props }) {
       </Link>
       <div className="header__nav">
         <Link to="/">
-          <h6>Explore</h6>
+          <h6>
+            Explore
+            {activeTag === "explore" ? (
+              <div className="header__nav__active"></div>
+            ) : null}
+          </h6>
         </Link>
       </div>
       <div className="header__right__buttons">
