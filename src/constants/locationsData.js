@@ -1,61 +1,59 @@
-import LondonImg from "../assets/london-img.jpg";
-import DubaiImg from "../assets/dubai-img.jpg";
-import FranceImg from "../assets/france-img.jpg";
-import GermanyImg from "../assets/germany-img.jpg";
-import AustraliaImg from "../assets/australia-img.jpg";
-import NewZealandImg from "../assets/newZealand-img.jpg";
+import ParisImg from "../assets/paris.jpg";
+import AmsterdamImg from "../assets/amsterdam.jpg";
+import RomeImg from "../assets/rome.jpg";
+import ViennaImg from "../assets/vienna.jpg";
+import PragueImg from "../assets/prague.jpg";
+import LondonImg from "../assets/london.jpg";
+import NewYorkImg from "../assets/newYork.jpg";
+import Istanbul from "../assets/istanbul.jpg";
+import DubaiImg from "../assets/dubai.jpg";
+import BangkokImg from "../assets/bangkok.jpg";
+import KualaLumpurImg from "../assets/kualaLumpur.jpg";
+import TokyoImg from "../assets/tokyo.jpg";
+
 const locationList = [
   {
     id: 1,
-    name: "London",
-    subData: "Capital of England",
+    name: "Paris",
+    subData: "Capital of France",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: LondonImg,
+      "France's capital, a major European city and a global center for art, fashion, gastronomy and culture. ",
+    img: ParisImg,
   },
   {
     id: 2,
-    name: "Dubai",
-    subData: "City in United Arab Emirates",
+    name: "Amsterdam",
+    subData: "Capital of Netherlands",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: DubaiImg,
+      "Known for its artistic heritage, elaborate canal system and narrow houses with gabled facades.",
+    img: AmsterdamImg,
   },
   {
     id: 3,
-    name: "France",
-    subData: "Western European Country",
+    name: "Rome",
+    subData: "Capital of Italy",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: FranceImg,
+      "Rome is the capital city and a special comune of Italy, as well as the capital of the Lazio region.",
+    img: RomeImg,
   },
-
   {
     id: 4,
-    name: "Germany",
-    subData: "Western European Country",
+    name: "Vienna",
+    subData: "Capital of Austria",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: GermanyImg,
+      "It's artistic and intellectual legacy was shaped by residents including Mozart and Beethoven.",
+    img: ViennaImg,
   },
   {
     id: 5,
-    name: "New Zealand",
-    subData: "Island in Pacific Ocean",
+    name: "Prague",
+    subData: "Capital of the Czech Republic",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: NewZealandImg,
+      "Known for its Old Town Square, with colorful baroque buildings and Gothic churches. ",
+    img: PragueImg,
   },
   {
     id: 6,
-    name: "Australia",
-    subData: "Country",
-    description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: AustraliaImg,
-  },
-  {
-    id: 7,
     name: "London",
     subData: "Capital of England",
     description:
@@ -63,45 +61,53 @@ const locationList = [
     img: LondonImg,
   },
   {
-    id: 8,
-    name: "Dubai",
-    subData: "City in United Arab Emirates",
+    id: 7,
+    name: "New York City",
+    subData: "City in New York State",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: DubaiImg,
+      "Comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean.",
+    img: NewYorkImg,
+  },
+  {
+    id: 8,
+    name: "Istanbul",
+    subData: "City in Turkey",
+    description:
+      "Roman-era Hippodrome was for centuries the site of chariot races, and Egyptian obelisks also remain.",
+    img: Istanbul,
   },
   {
     id: 9,
-    name: "France",
-    subData: "Western European Country",
+    name: "Dubai",
+    subData: "City in United Arab Emirates",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: FranceImg,
+      "Burj Khalifa, Dubai Creek, Ski Dubai, Jumeirah Beach,Shopping malls, Beaches, Desert Safari.",
+    img: DubaiImg,
   },
 
   {
     id: 10,
-    name: "Germany",
-    subData: "Western European Country",
+    name: "Bangkok",
+    subData: "Capital of Thailand",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: GermanyImg,
+      "Thailand’s capital, is a large city known for ornate shrines and vibrant street life.",
+    img: BangkokImg,
   },
   {
     id: 11,
-    name: "New Zealand",
-    subData: "Island in Pacific Ocean",
+    name: "Kuala Lumpur",
+    subData: "Capital of Malaysia",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: NewZealandImg,
+      "Its modern skyline is dominated by the 451m-tall Petronas Twin Towers.",
+    img: KualaLumpurImg,
   },
   {
     id: 12,
-    name: "Australia",
-    subData: "Country",
+    name: "Tokyo",
+    subData: "Capital of Japan",
     description:
-      "Royal Heritage, Literary London, Historic pubs, Markets Art Museum, Football.",
-    img: AustraliaImg,
+      "The city mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.",
+    img: TokyoImg,
   },
 ];
 export default locationList;

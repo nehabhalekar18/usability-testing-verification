@@ -54,8 +54,8 @@ function App() {
             setSelectedImage={setSelectedImage}
           />
         )}
-        <Footer />
       </Switch>
+      <Footer />
     </div>
   );
 }

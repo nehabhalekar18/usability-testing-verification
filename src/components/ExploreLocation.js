@@ -1,8 +1,8 @@
 import AddIcon from "@material-ui/icons/Add";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import BannerImg from "../assets/dubai-banner-img.jpg";
-import dubaiLocations from "../constants/dubaiLocationsData";
+import BannerImg from "../assets/paris-banner-img.jpg";
+import placesToVisit from "../constants/placesToVisitData";
 import Banner from "./Banner";
 import DubaiLocations from "./DubaiLocations";
 import "./ExploreLocation.css";
@@ -12,16 +12,16 @@ function ExploreLocation(props) {
   const [selectedLocations, setSelectedLocations] = useState("");
 
   const [state, setState] = useState({
-    dubaiLocations,
+    placesToVisit,
     searchTerm: "",
   });
 
-  /*  var topSightsList = dubaiLocations.slice(0, 4);
-  var beachList = dubaiLocations.slice(4, 8); */
+  /*  var topSightsList = placesToVisit.slice(0, 4);
+  var beachList = placesToVisit.slice(4, 8); */
 
   const editSearchTerm = (e) => {
     setState({
-      dubaiLocations: dubaiLocations,
+      placesToVisit: placesToVisit,
       searchTerm: e.target.value,
     });
   };
@@ -36,7 +36,7 @@ function ExploreLocation(props) {
     <div className="exploreLocation">
       <Banner
         bannerImg={BannerImg}
-        searchLocation="Dubai"
+        searchLocation=""
         editSearchTerm={editSearchTerm}
       />
       <div className="exploreLocation__category">
@@ -84,28 +84,28 @@ function ExploreLocation(props) {
       </div>
 
       <DubaiLocations
-        locationList={dynamicSearch(dubaiLocations.topsights)}
+        locationList={dynamicSearch(placesToVisit.topsights)}
         getSelected={(locations) =>
           setSelectedLocations([...selectedLocations, locations])
         }
       />
-      <h5>Beaches</h5>
+      <h5>Monuments</h5>
       <DubaiLocations
-        locationList={dynamicSearch(dubaiLocations.beaches)}
+        locationList={dynamicSearch(placesToVisit.monuments)}
         getSelected={(locations) =>
           setSelectedLocations([...selectedLocations, locations])
         }
       />
-      <h5>Adventures</h5>
+      <h5>Museums</h5>
       <DubaiLocations
-        locationList={dynamicSearch(dubaiLocations.adventure)}
+        locationList={dynamicSearch(placesToVisit.museums)}
         getSelected={(locations) =>
           setSelectedLocations([...selectedLocations, locations])
         }
       />
-      <h5>dining and Bar</h5>
+      <h5>Things to do</h5>
       <DubaiLocations
-        locationList={dynamicSearch(dubaiLocations.bar)}
+        locationList={dynamicSearch(placesToVisit.thingsToDo)}
         getSelected={(locations) =>
           setSelectedLocations([...selectedLocations, locations])
         }

@@ -21,7 +21,7 @@ import StoryImg18 from "../assets/storybook-img-18.jpg";
 import StoryImg19 from "../assets/storybook-img-19.png";
 import StoryImg20 from "../assets/storybook-img-20.png";
 import StoryImg21 from "../assets/la-mer-img.jpg";
-import StoryImg22 from "../assets/london-img.jpg";
+import StoryImg22 from "../assets/london.jpg";
 import "./Gallery.css";
 
 function Gallery({ setSelectedImage }) {
