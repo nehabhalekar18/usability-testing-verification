@@ -68,9 +68,9 @@ function TripDetails({
                         <h6>Cove Beach</h6>
                         <DeleteOutlinedIcon />
                       </div>
-                      <div className="tripDetails__vertical"></div>
+                      <div className="tripDetails__vertical1"></div>
                       <div>
-                        <LocationOnOutlinedIcon />
+                        <LocationOnOutlinedIcon className="marker" />
                         <h6>Desert Safari</h6>
                         <DeleteOutlinedIcon />
                       </div>

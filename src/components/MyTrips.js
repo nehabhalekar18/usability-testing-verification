@@ -123,14 +123,14 @@ function MyTrips(props) {
                 <div
                   className="search__sort"
                   onClick={() => sortTrips("oldest")}>
-                  <h6>Latest</h6>
+                  <h6>Latest&nbsp;&nbsp;</h6>
                   <i className="bi bi-sort-down search__sortLatest"></i>
                 </div>
               ) : (
                 <div
                   className="search__sort"
                   onClick={() => sortTrips("latest")}>
-                  <h6>Oldest</h6>
+                  <h6>Oldest&nbsp;&nbsp;</h6>
                   <i className="bi bi-sort-up-alt search__sortOldest"></i>
                 </div>
               )}
