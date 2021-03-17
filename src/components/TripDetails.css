@@ -44,6 +44,7 @@
   justify-content: space-between;
   width: 200px;
 }
+
 .tripDetails__vertical {
   height: 58px;
   width: 1px !important;
@@ -84,7 +85,7 @@
   margin: 0;
 }
 .tripDetails__friends {
-  margin-bottom: 50px;
+  margin-top: 10px;
 }
 .tripDetails__friends > h5 {
   margin-top: 20px;
