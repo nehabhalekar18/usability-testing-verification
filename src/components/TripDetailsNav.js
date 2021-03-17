@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./TripDetailsNav.css";
 
-function TripDetailsNav({ contentDetails, journalContentsValue }) {
+function TripDetailsNav({ contentDetails, journalContentsValue, action }) {
   const [uploadContent, setUploadContent] = useState(false);
   function journalContents() {
     setUploadContent(true);
@@ -34,15 +34,20 @@ function TripDetailsNav({ contentDetails, journalContentsValue }) {
       </div>
       {uploadContent ? (
         <div className="tripDetailsNav__right">
-          <div className="tripDetailsNav__upload">
-            <h6>Upload</h6>
-            <i className="bi bi-upload"></i>
-          </div>
-          <select onChange={(e) => journalContentsValue(e.target.value)}>
-            <option value="all">All</option>
-            <option value="photos">Photos</option>
-            <option value="blogs">Blogs</option>
-          </select>
+          {action !== "createTrip" ? (
+            <Fragment>
+              <div className="tripDetailsNav__upload">
+                <h6>Upload</h6>
+                <i className="bi bi-upload"></i>
+              </div>
+
+              <select onChange={(e) => journalContentsValue(e.target.value)}>
+                <option value="all">All</option>
+                <option value="photos">Photos</option>
+                <option value="blogs">Blogs</option>
+              </select>
+            </Fragment>
+          ) : null}
         </div>
       ) : null}
     </div>
