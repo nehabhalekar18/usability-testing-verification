@@ -8,7 +8,7 @@ function Banner({ bannerImg, searchLocation, editSearchTerm }) {
     <div className="banner">
       <img src={bannerImg} alt="" className="banner__img" />
       <div className="banner__search">
-        <LocationOnOutlinedIcon />
+        <LocationOnOutlinedIcon className="banner__locationIcon" />
         <input
           type="text"
           placeholder="Location"
