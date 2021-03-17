@@ -9,8 +9,7 @@ function Explore({ isLogin }) {
   const [loadMoreBtn, setLoadMoreBtn] = useState(true);
   var items = locationList.slice(0, 8);
   const [locations, setLocations] = useState(items);
-  console.log(locations);
-  const [state, setState] = useState({ locationList, searchTerm: "" });
+  const [state, setState] = useState({ locations, searchTerm: "" });
   const loadMore = () => {
     setLocations(locationList);
     setLoadMoreBtn(false);
@@ -18,13 +17,13 @@ function Explore({ isLogin }) {
 
   const editSearchTerm = (e) => {
     setState({
-      locationList: locationList,
+      locations: locations,
       searchTerm: e.target.value,
     });
   };
 
   const dynamicSearch = () => {
-    return state.locationList.filter((location) =>
+    return locations.filter((location) =>
       location.name.toLowerCase().includes(state.searchTerm.toLowerCase())
     );
   };

@@ -1,5 +1,5 @@
-import DubaiImg from "../assets/dubai-img.jpg";
-import LondonImg from "../assets/london-img.jpg";
+import DubaiImg from "../assets/dubai.jpg";
+import LondonImg from "../assets/london.jpg";
 const tripCardList = [
   {
     id: 1,

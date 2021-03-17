@@ -6,7 +6,6 @@ import UserImg from "../assets/user-img.jpg";
 import "./Header.css";
 
 function Header({ activeTag, setActiveTag, signedIn, pathName, props }) {
-  console.log(activeTag);
   let history = useHistory();
 
   const goToLogin = (login) => {

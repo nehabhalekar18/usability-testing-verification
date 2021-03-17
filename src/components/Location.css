@@ -17,13 +17,15 @@
 }
 .location__card:hover {
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
   transform: scale(1.05);
 }
 .location__img {
   height: 180px;
-  max-width: -webkit-fill-available;
-  min-width: -webkit-fill-available;
+  /* max-width: -webkit-fill-available; */
+  min-width: 100%;
   border-radius: 16px 16px 0 0;
+  object-fit: cover;
 }
 .location__data {
   padding-top: 12px;
